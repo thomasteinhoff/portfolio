@@ -6,6 +6,12 @@ A página inicial funciona como uma **prancha editorial modular**: uma grade ass
 
 > **Estado do conteúdo:** nomes, textos, imagens, anos, e-mail e links são provisórios. Nenhum cliente, resultado ou experiência profissional foi inventado. Os pontos que precisam de substituição estão indicados no site e neste README.
 
+## Planejamento
+
+A **Fase 0 — consolidação do planejamento** está concluída. A Fase 1 está planejada, mas não foi iniciada. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
+
+Este README descreve o estado real do protótipo v0.1. A estrutura-alvo, as fases e o fluxo detalhado de trabalho não são duplicados aqui.
+
 ## Tecnologias
 
 - HTML5 semântico
@@ -17,6 +23,8 @@ A página inicial funciona como uma **prancha editorial modular**: uma grade ass
 Não há dependências externas obrigatórias, ferramentas de build, requisições a CDNs ou carregamento dinâmico de conteúdo.
 
 ## Estrutura
+
+Estrutura atual do protótipo. A estrutura-alvo, com versões PT/EN, arquivo de projetos e templates internos, está descrita no [`ROADMAP.md`](ROADMAP.md).
 
 ```text
 portfolio/
@@ -44,6 +52,7 @@ portfolio/
 │   │   └── favicon.svg
 │   └── images/              # reservada para imagens reais futuras
 ├── .gitignore
+├── ROADMAP.md               # planejamento, fases e fluxo de trabalho
 └── README.md
 ```
 
@@ -84,20 +93,20 @@ Substitua os placeholders em todas as páginas:
 3. **Anos:** busque por `20—` nos cards, currículo e ficha técnica.
 4. **Links externos:** a página de contato aponta para o GitHub informado no briefing e marca os demais canais como “em preparação”.
 5. **Textos provisórios:** revise as notas com `Provisório`, `Em preparação` e `a confirmar`.
-6. **Imagens:** as composições atuais são SVG/CSS. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/`.
+6. **Imagens:** as composições atuais são SVG/CSS. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/`; a produção desses materiais depende do PC de casa.
+7. **Currículo:** conferir o conteúdo contra o arquivo `.tex` existente antes de publicar. Não inventar experiências, datas ou formação.
 
 ## Adicionar um novo projeto
 
-1. Duplique `pages/projects/project-template.html` com um nome descritivo, por exemplo `pages/projects/nome-do-projeto.html`.
-2. Atualize título, ficha técnica, textos e placas vetoriais. Ajuste os caminhos relativos (`../../assets/...`).
-3. No `index.html`, adicione um card dentro de `.project-grid`. Reutilize as classes existentes:
-   - `card--tally` para um card grande com imagem e informações;
-   - `card--argos` para um card tipográfico;
-   - `card--library` / `card--chapas` para imagem + informações;
-   - `card--identity` / `card--illustration` para card somente de imagem.
-4. Ajuste as posições `grid-column` / `grid-row` no `assets/css/components.css` e as recomposições em `responsive.css`. O mosaico foi desenhado manualmente; inserir um card exige revisar a ocupação da grade.
-5. Adicione o projeto à lista do currículo (`pages/curriculum.html`) e ao índice do card `card--index`.
-6. Para imagens reais, use caminhos relativos e formatos otimizados (AVIF/WebP, com fallback quando necessário). Arquivos-fonte pesados de design são ignorados pelo `.gitignore`.
+O fluxo definitivo será implementado a partir da F1/F2 e está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): templates internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
+
+Enquanto a migração não acontece, o protótipo v0.1 ainda usa `pages/projects/project-template.html` e o mosaico manual de `index.html`/`components.css`. Esse fluxo é transitório e não deve ser tratado como arquitetura final.
+
+## Desenvolvimento em dois computadores
+
+O trabalho é dividido entre o PC do trabalho (repositórios, código, documentação, textos e páginas de software) e o PC de casa (materiais originais, capturas, SVGs, imagens e mockups). O GitHub é o ponto central de sincronização.
+
+As regras de execução, as etiquetas `[REMOTO]`, `[CASA]` e `[QUALQUER]` e as práticas de sincronização estão na seção 10 do [`ROADMAP.md`](ROADMAP.md). Este README não duplica esse detalhamento.
 
 ## Acessibilidade e JavaScript
 
@@ -127,12 +136,14 @@ O projeto é compatível com hospedagem estática e não exige build. Quando o c
 3. Como os caminhos são relativos e o site parte da raiz, não é necessário configurar `base` ou variáveis.
 4. Não há GitHub Actions configurada; a publicação pode ser feita diretamente pela interface do GitHub.
 
-A publicação e o push não são automáticos nesta versão: o envio ao GitHub e a ativação do Pages são passos manuais do autor.
+O push é feito manualmente ao final de cada fase concluída. A ativação do GitHub Pages continua manual e deve ocorrer depois das etapas de conteúdo e QA.
 
 ## Limitações desta versão
 
 - Conteúdo, imagem de retrato, e-mail e links são provisórios.
 - Não há formulário de contato funcional, CMS, banco de dados ou integração externa.
+- A versão em inglês ainda não foi implementada; ela está planejada no roadmap.
 - Apenas Tally possui página interna demonstrativa; os demais cards indicam “em preparação”.
 - O mosaico de projetos usa posições explícitas de grade. Novos cards exigem ajuste manual da composição em desktop e tablet.
-- O PDF do currículo ainda não existe; o botão está visualmente desativado.
+- O PDF do currículo ainda não existe; o botão está visualmente desativado. O conteúdo deve ser conciliado com o `.tex` existente.
+- A Fase 1 ainda não foi iniciada; a estrutura bilíngue e o arquivo de projetos são planejamento, não implementação atual.
