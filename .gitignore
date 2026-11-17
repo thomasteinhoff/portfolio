@@ -1,0 +1,68 @@
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editores e configurações pessoais
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Logs, caches e temporários
+*.log
+*.tmp
+*.temp
+*.bak
+*.bak.*
+.cache/
+tmp/
+temp/
+
+# Dependências e build (não utilizados neste projeto)
+node_modules/
+dist/
+build/
+out/
+coverage/
+
+# Variáveis de ambiente e arquivos sensíveis
+.env
+.env.*
+!.env.example
+
+# Arquivos originais de design e produção
+*.psd
+*.psb
+*.ai
+*.eps
+*.indd
+*.idml
+*.cdr
+*.sketch
+*.fig
+*.xd
+*.afdesign
+*.afphoto
+*.blend
+*.max
+*.3ds
+*.obj
+*.fbx
+*.dxf
+*.dwg
+
+# Pacotes e backups locais
+*.zip
+*.rar
+*.7z
+*_backup*
+*_old*
