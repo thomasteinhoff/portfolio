@@ -62,7 +62,7 @@
     grid-row: 11 / span 4;
   }
 
-  .card--chapas {
+  .card--sheets {
     grid-column: 4 / span 3;
     grid-row: 11 / span 4;
   }
@@ -149,7 +149,8 @@
     --header-h: 60px;
   }
 
-  .site-nav {
+  .site-nav,
+  .site-header__inner > .lang-switch {
     display: none;
   }
 
@@ -414,7 +415,7 @@
   .card--identity,
   .card--illustration,
   .card--library,
-  .card--chapas,
+  .card--sheets,
   .card--note,
   .card--index {
     grid-column: auto;
@@ -441,7 +442,7 @@
     order: 4;
   }
 
-  .card--chapas {
+  .card--sheets {
     order: 5;
   }
 
@@ -482,7 +483,7 @@
     min-height: 0;
   }
 
-  .card--chapas .card__art {
+  .card--sheets .card__art {
     aspect-ratio: 4 / 3;
     min-height: 0;
   }

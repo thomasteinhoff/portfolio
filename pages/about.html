@@ -6,6 +6,10 @@
   <title>Sobre — Nome Sobrenome</title>
   <meta name="description" content="Perfil profissional provisório: design gráfico, ilustração, interfaces, desenvolvimento e fabricação digital.">
   <meta name="theme-color" content="#f1ede4">
+  <link rel="canonical" href="https://thomasteinhoff.github.io/portfolio/pages/about.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://thomasteinhoff.github.io/portfolio/pages/about.html">
+  <link rel="alternate" hreflang="en" href="https://thomasteinhoff.github.io/portfolio/pages/about.en.html">
+  <link rel="alternate" hreflang="x-default" href="https://thomasteinhoff.github.io/portfolio/pages/about.html">
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/fonts.css">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -13,7 +17,7 @@
   <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body id="top">
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip-link" href="#content">Pular para o conteúdo</a>
 
   <header class="site-header">
     <div class="site-header__inner shell">
@@ -27,13 +31,19 @@
 
       <nav class="site-nav" aria-label="Navegação principal">
         <a class="site-nav__link" href="../index.html"><span>01</span>Início</a>
-        <a class="site-nav__link" href="../index.html#projetos"><span>02</span>Projetos</a>
+        <a class="site-nav__link" href="../index.html#projects"><span>02</span>Projetos</a>
         <a class="site-nav__link" href="about.html" aria-current="page"><span>03</span>Sobre</a>
         <a class="site-nav__link" href="curriculum.html"><span>04</span>Currículo</a>
         <a class="site-nav__link site-nav__contact" href="contact.html"><span>05</span>Contato
           <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" stroke="currentColor" stroke-width="1.4"/></svg>
         </a>
       </nav>
+
+      <div class="lang-switch" aria-label="Idioma">
+        <span class="lang-switch__item" aria-current="true">PT</span>
+        <span class="lang-switch__sep" aria-hidden="true">/</span>
+        <a class="lang-switch__item" href="about.en.html" hreflang="en" aria-label="Ver esta página em inglês">EN</a>
+      </div>
 
       <details class="menu">
         <summary class="menu__trigger">
@@ -43,11 +53,19 @@
         <div class="menu__panel">
           <nav class="menu__nav" aria-label="Navegação principal (mobile)">
             <a href="../index.html"><span>01</span><span>Início</span><span>↗</span></a>
-            <a href="../index.html#projetos"><span>02</span><span>Projetos</span><span>↗</span></a>
+            <a href="../index.html#projects"><span>02</span><span>Projetos</span><span>↗</span></a>
             <a href="about.html" aria-current="page"><span>03</span><span>Sobre</span><span>↗</span></a>
             <a href="curriculum.html"><span>04</span><span>Currículo</span><span>↗</span></a>
             <a href="contact.html"><span>05</span><span>Contato</span><span>↗</span></a>
           </nav>
+          <div class="menu__lang" aria-label="Idioma">
+            <span class="mono">Idioma</span>
+            <div class="lang-switch">
+              <span class="lang-switch__item" aria-current="true">PT</span>
+              <span class="lang-switch__sep" aria-hidden="true">/</span>
+              <a class="lang-switch__item" href="about.en.html" hreflang="en" aria-label="Ver esta página em inglês">EN</a>
+            </div>
+          </div>
           <div class="menu__foot">
             <a href="mailto:contato@exemplo.com">contato@exemplo.com</a>
             <span class="mono">E-mail provisório — protótipo 0.1</span>
@@ -57,7 +75,7 @@
     </div>
   </header>
 
-  <main id="conteudo" class="page">
+  <main id="content" class="page">
     <div class="shell">
       <header class="page-hero">
         <div class="page-hero__meta">
@@ -169,10 +187,10 @@
         </div>
       </section>
 
-      <section class="page-section" aria-labelledby="atuacao-title">
+      <section class="page-section" aria-labelledby="practice-title">
         <div class="page-section__label">
           <span class="index">01</span>
-          <h2 id="atuacao-title">Atuação</h2>
+          <h2 id="practice-title">Atuação</h2>
         </div>
         <div class="page-section__body">
           <h3 class="page-section__title">Seis frentes, uma mesma lógica de projeto.</h3>
@@ -224,10 +242,10 @@
         </div>
       </section>
 
-      <section class="page-section" aria-labelledby="formacao-title">
+      <section class="page-section" aria-labelledby="education-title">
         <div class="page-section__label">
           <span class="index">02</span>
-          <h2 id="formacao-title">Formação</h2>
+          <h2 id="education-title">Formação</h2>
         </div>
         <div class="page-section__body">
           <div class="cv-entry">
@@ -285,7 +303,7 @@
           <p class="footer__label">Índice</p>
           <nav class="footer__nav" aria-label="Navegação do rodapé">
             <a href="../index.html">Início</a>
-            <a href="../index.html#projetos">Projetos</a>
+            <a href="../index.html#projects">Projetos</a>
             <a href="about.html">Sobre</a>
             <a href="curriculum.html">Currículo</a>
             <a href="contact.html">Contato</a>

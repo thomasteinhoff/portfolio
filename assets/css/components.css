@@ -184,7 +184,7 @@
   grid-row: 7 / span 6;
 }
 
-.card--chapas {
+.card--sheets {
   grid-column: 6 / span 4;
   grid-row: 7 / span 4;
 }
@@ -282,10 +282,10 @@
   background: var(--paper-2);
 }
 
-/* Library + Chapas */
+/* Library + sheets */
 
 .card--library .card__art > svg,
-.card--chapas .card__art > svg {
+.card--sheets .card__art > svg {
   transition: transform 0.55s var(--ease);
 }
 
@@ -1413,7 +1413,7 @@ a.contact__channel:hover {
 
 @media (max-width: 1100px) {
   .card--library .card__info,
-  .card--chapas .card__info {
+  .card--sheets .card__info {
     padding: 10px 12px;
   }
 

@@ -311,6 +311,39 @@ ol {
   transform: translate(2px, -2px);
 }
 
+/* Language switch: plain links, no JavaScript. */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lang-switch__item {
+  color: var(--muted);
+  transition: color 0.18s var(--ease);
+}
+
+.lang-switch__item[aria-current="true"] {
+  color: var(--ink);
+}
+
+a.lang-switch__item:hover {
+  color: var(--signal-text);
+}
+
+.lang-switch__sep {
+  color: var(--line-strong);
+}
+
 /* Mobile index menu: works without JavaScript. */
 
 .menu {
@@ -443,6 +476,27 @@ body.menu-open {
   max-width: 22ch;
   color: var(--muted);
   font-size: 0.5rem;
+}
+
+.menu__lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.menu__lang > .mono {
+  color: var(--muted);
+  font-size: 0.5rem;
+}
+
+.menu__lang .lang-switch {
+  margin: 0;
+  padding: 0;
+  border-left: 0;
+  font-size: 0.75rem;
 }
 
 /* --------------------------------------------------------------------------

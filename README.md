@@ -8,7 +8,7 @@ A página inicial funciona como uma **prancha editorial modular**: uma grade ass
 
 ## Planejamento
 
-A **Fase 0 — consolidação do planejamento** está concluída. A Fase 1 está planejada, mas não foi iniciada. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
+A **Fase 0 — consolidação do planejamento** está concluída. A **Fase 1 — fundação bilíngue do shell** foi implementada para as páginas institucionais, com uma pendência editorial: o currículo PT/EN continua em rascunho até a fonte `.tex` ser localizada e conferida. A Fase 2 ainda não foi iniciada. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
 
 Este README descreve o estado real do protótipo v0.1. A estrutura-alvo, as fases e o fluxo detalhado de trabalho não são duplicados aqui.
 
@@ -24,15 +24,19 @@ Não há dependências externas obrigatórias, ferramentas de build, requisiçõ
 
 ## Estrutura
 
-Estrutura atual do protótipo. A estrutura-alvo, com versões PT/EN, arquivo de projetos e templates internos, está descrita no [`ROADMAP.md`](ROADMAP.md).
+Estrutura atual do protótipo. As páginas institucionais têm pares PT/EN; a página demonstrativa do Tally permanece apenas em português até a F2. A estrutura-alvo, com arquivo de projetos e templates internos, está descrita no [`ROADMAP.md`](ROADMAP.md).
 
 ```text
 portfolio/
 ├── index.html
+├── index.en.html
 ├── pages/
 │   ├── about.html
+│   ├── about.en.html
 │   ├── curriculum.html
+│   ├── curriculum.en.html
 │   ├── contact.html
+│   ├── contact.en.html
 │   └── projects/
 │       └── project-template.html
 ├── assets/
@@ -55,6 +59,12 @@ portfolio/
 ├── ROADMAP.md               # planejamento, fases e fluxo de trabalho
 └── README.md
 ```
+
+## Idiomas
+
+Português é o idioma principal e permanece nos caminhos atuais. O inglês usa o sufixo `.en.html` no mesmo diretório, por exemplo `index.en.html` e `pages/about.en.html`.
+
+A troca de idioma é feita por links HTML comuns, sem JavaScript, e aponta para a página equivalente. O idioma atual é marcado com `aria-current="true"`. As páginas institucionais PT/EN estão publicadas como protótipo; a página do Tally continua em português até a F2, e o currículo EN é um rascunho até a conferência com o `.tex`.
 
 ## Executar localmente
 
@@ -88,17 +98,17 @@ Depois acesse `http://localhost:8000`.
 
 Substitua os placeholders em todas as páginas:
 
-1. **Nome:** busque por `Nome Sobrenome` e `NS` (marca, títulos, rodapé e README).
+1. **Nome:** busque por `Nome Sobrenome`, `Name Surname` e `NS` (marca, títulos, rodapé e README).
 2. **E-mail:** busque por `contato@exemplo.com` (header mobile, rodapé e página de contato).
 3. **Anos:** busque por `20—` nos cards, currículo e ficha técnica.
 4. **Links externos:** a página de contato aponta para o GitHub informado no briefing e marca os demais canais como “em preparação”.
-5. **Textos provisórios:** revise as notas com `Provisório`, `Em preparação` e `a confirmar`.
+5. **Textos provisórios:** revise as notas com `Provisório`, `Provisional`, `Em preparação`, `In preparation` e `a confirmar` / `to be confirmed`.
 6. **Imagens:** as composições atuais são SVG/CSS. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/`; a produção desses materiais depende do PC de casa.
 7. **Currículo:** conferir o conteúdo contra o arquivo `.tex` existente antes de publicar. Não inventar experiências, datas ou formação.
 
 ## Adicionar um novo projeto
 
-O fluxo definitivo será implementado a partir da F1/F2 e está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): templates internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
+O fluxo definitivo será implementado a partir da F2 e está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): templates internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
 
 Enquanto a migração não acontece, o protótipo v0.1 ainda usa `pages/projects/project-template.html` e o mosaico manual de `index.html`/`components.css`. Esse fluxo é transitório e não deve ser tratado como arquitetura final.
 
@@ -142,8 +152,8 @@ O push é feito manualmente ao final de cada fase concluída. A ativação do Gi
 
 - Conteúdo, imagem de retrato, e-mail e links são provisórios.
 - Não há formulário de contato funcional, CMS, banco de dados ou integração externa.
-- A versão em inglês ainda não foi implementada; ela está planejada no roadmap.
+- A versão em inglês cobre as páginas institucionais; a página demonstrativa do Tally e o arquivo de projetos ainda não têm par EN. Essa migração pertence à F2.
 - Apenas Tally possui página interna demonstrativa; os demais cards indicam “em preparação”.
 - O mosaico de projetos usa posições explícitas de grade. Novos cards exigem ajuste manual da composição em desktop e tablet.
-- O PDF do currículo ainda não existe; o botão está visualmente desativado. O conteúdo deve ser conciliado com o `.tex` existente.
-- A Fase 1 ainda não foi iniciada; a estrutura bilíngue e o arquivo de projetos são planejamento, não implementação atual.
+- O PDF do currículo ainda não existe; o botão está visualmente desativado. O par PT/EN atual é um rascunho e deve ser conciliado com o `.tex` existente.
+- A Fase 1 foi concluída com pendência editorial no currículo; a Fase 2 (estrutura de projetos) ainda não foi iniciada.
