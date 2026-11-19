@@ -6,9 +6,9 @@
 >
 > **Branch:** `main`
 >
-> **Próxima fase:** F4 — modelos editoriais internos.
+> **Próxima fase:** F5 — piloto de Branding.
 >
-> **Escopo deste documento:** decisões de arquitetura, internacionalização, conteúdo, estrutura de arquivos, ambientes de trabalho e entregas futuras. A implementação da F4 em diante não faz parte desta etapa.
+> **Escopo deste documento:** decisões de arquitetura, internacionalização, conteúdo, estrutura de arquivos, ambientes de trabalho e entregas futuras. A implementação da F5 em diante não faz parte desta etapa.
 
 > **Decisão de i18n consolidada:** português é o idioma principal, na estrutura atual; inglês usa o sufixo `.en.html`. A alternância é feita por links HTML convencionais, sem JavaScript, e deve levar à página equivalente no outro idioma.
 
@@ -18,12 +18,13 @@
 
 ## 1. Objetivo
 
-Preparar o portfólio para receber os trabalhos reais do proprietário em quatro famílias editoriais:
+Preparar o portfólio para receber os trabalhos reais do proprietário em três famílias editoriais:
 
 - Branding.
 - Ilustração e vetor.
 - Software e produtos digitais.
-- Produção gráfica.
+
+Produção gráfica não é categoria principal nesta etapa: fica no currículo. Adesivos e materiais gráficos podem aparecer como galeria ou coletânea dentro de ilustração.
 
 O site deve continuar:
 
@@ -47,8 +48,8 @@ O documento também organiza a execução entre dois computadores e registra as 
 |---|---|
 | Arquitetura | HTML independente para cada página. |
 | Compartilhamento | CSS e JavaScript compartilhados quando fizer sentido. |
-| Modelos | Templates HTML copiáveis em `pages/projects/_templates/`, mantidos como modelos internos de desenvolvimento. |
-| Publicação de modelos | Templates não são páginas públicas do portfólio e não entram na navegação nem no arquivo. |
+| Modelos | Pares de modelos PT/EN copiáveis em `pages/projects/_templates/`, mantidos como internos. |
+| Publicação de modelos | Não são páginas públicas; usam `noindex, nofollow` e não entram na navegação nem no arquivo. `canonical`/`hreflang` são adicionados somente ao copiar para um projeto real. |
 | Duplicação | Duplicação pontual de HTML é aceitável. |
 | Renderização | Sem geradores, includes, partials em JavaScript ou mecanismos complexos para evitar repetição. |
 | Stack | HTML5, CSS3 e JavaScript puro. |
@@ -87,7 +88,7 @@ O protótipo v0.1 contém:
 - Home editorial com hero, ticker, mosaico assimétrico e rodapé.
 - Páginas Sobre, Currículo e Contato, com versões PT/EN.
 - Troca de idioma por links HTML, no header e no menu móvel.
-- Uma página demonstrativa de projeto: Tally, ainda apenas em português.
+- Uma página demonstrativa de projeto: Tally, com par PT/EN.
 - CSS dividido em `fonts.css`, `style.css`, `components.css` e `responsive.css`.
 - `main.js` pequeno, com menu nativo `<details>`, foco, bloqueio de rolagem e ano do rodapé.
 - Fontes WOFF2 embutidas para funcionamento via `file://`.
@@ -97,7 +98,7 @@ O protótipo v0.1 contém:
 
 A Fase 0 está concluída: as decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e fluxo de execução foram consolidadas neste documento e no README. A Fase 1 foi implementada para as páginas institucionais: home, Sobre, Currículo e Contato têm versões PT/EN, troca de idioma por links HTML, metadados e âncoras normalizadas. O currículo continua em rascunho editorial até a fonte `.tex` ser localizada e conferida.
 
-O protótipo institucional é bilíngue. Na F2, a página demonstrativa do Tally migrou para `pages/projects/tally/`, recebeu o par PT/EN e passou a abrigar os componentes com suporte a imagens. Na F3, o arquivo de projetos foi publicado em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. Os templates internos permanecem para F4.
+O protótipo institucional é bilíngue. Na F2, a página demonstrativa do Tally migrou para `pages/projects/tally/`, recebeu o par PT/EN e passou a abrigar os componentes com suporte a imagens. Na F3, o arquivo de projetos foi publicado em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. A F4 criou os pares PT/EN dos modelos internos de Branding, Ilustração e Software.
 
 ### Pontos fortes a preservar
 
@@ -111,11 +112,11 @@ O protótipo institucional é bilíngue. Na F2, a página demonstrativa do Tally
 
 1. A home acumula o papel de vitrine e de arquivo completo.
 2. O mosaico usa classes e posições ligadas a projetos específicos.
-3. Existe apenas um modelo de projeto, ainda demonstrativo.
+3. Há três modelos editoriais internos, em seis arquivos PT/EN; nenhum é página pública.
 4. Imagens reais ainda não foram produzidas; desde a F2 os componentes já aceitam `<img>` nos slots existentes.
 5. Cabeçalho, menu e rodapé são duplicados.
 6. Metadados são repetidos entre home, currículo, índice e página do projeto.
-7. A versão em inglês cobre as páginas publicadas, mas o arquivo e os templates ainda não existem.
+7. A versão em inglês cobre as páginas publicadas, o arquivo e os modelos internos.
 8. Alguns identificadores técnicos e âncoras ainda estão em português, contrariando a nova regra de nomenclatura.
 
 ---
@@ -128,7 +129,7 @@ O protótipo institucional é bilíngue. Na F2, a página demonstrativa do Tally
 - **`pages/projects/index.html`:** fonte de verdade da lista completa de projetos publicados.
 - **Home:** seleção curada de projetos em destaque.
 - **Currículo:** seleção de projetos ou link para o arquivo; não deve manter uma lista completa paralela.
-- **Templates em `pages/projects/_templates/`:** modelos internos de desenvolvimento; não são fonte de conteúdo publicado e não aparecem na navegação.
+- **Modelos em `pages/projects/_templates/`:** pares PT/EN internos de desenvolvimento; não são fonte de conteúdo publicado e não aparecem na navegação.
 
 Essa separação evita que a home e o currículo precisem ser atualizados a cada novo projeto.
 
@@ -151,7 +152,7 @@ Essa separação evita que a home e o currículo precisem ser atualizados a cada
 | Contato | E-mail, GitHub e canais disponíveis. |
 | Arquivo de projetos | Lista completa, agrupada por categoria. |
 | Página de projeto | Estudo de caso com composição específica. |
-| Modelos de projeto | Templates internos em `pages/projects/_templates/`; referências copiáveis, não páginas publicadas. |
+| Modelos de projeto | Pares PT/EN internos em `pages/projects/_templates/`; referências copiáveis, não páginas publicadas. |
 
 ### 4.4 Conteúdo de um projeto
 
@@ -357,9 +358,11 @@ portfolio/
 │       ├── index.en.html              # arquivo EN
 │       ├── _templates/
 │       │   ├── branding.html
+│       │   ├── branding.en.html
 │       │   ├── illustration.html
+│       │   ├── illustration.en.html
 │       │   ├── software.html
-│       │   └── print.html
+│       │   └── software.en.html
 │       ├── tally/
 │       │   ├── index.html             # projeto PT
 │       │   ├── index.en.html          # projeto EN
@@ -376,11 +379,7 @@ portfolio/
 │   │   ├── style.css
 │   │   ├── components.css
 │   │   ├── responsive.css
-│   │   └── projects/
-│   │       ├── branding.css           # criar só quando necessário
-│   │       ├── illustration.css
-│   │       ├── software.css
-│   │       └── print.css
+│   │   └── projects/                  # opcional; nenhum arquivo criado na F4
 │   ├── js/
 │   │   └── main.js
 │   ├── fonts/
@@ -394,8 +393,8 @@ portfolio/
 ### Observações
 
 - `_templates` fica no mesmo nível de profundidade das pastas de projeto (`pages/projects/<slug>/`). Ao copiar um modelo para a pasta do projeto, os caminhos para CSS, home e arquivo continuam corretos.
-- O template é neutro em relação ao idioma; ao gerar as versões PT/EN, traduzir o conteúdo e ajustar os links internos para `.html` ou `.en.html`.
-- `_templates` contém modelos internos de desenvolvimento. Os arquivos não são páginas públicas, não entram na navegação, não aparecem no arquivo e não devem ser indexados.
+- Cada modelo existe em par PT/EN (`<base>.html` e `<base>.en.html`); manter os mesmos IDs e a mesma sequência de tags nas duas versões.
+- `_templates` contém modelos internos de desenvolvimento. Os arquivos não são páginas públicas, não entram na navegação, não aparecem no arquivo e usam `noindex, nofollow`. Enquanto forem internos, não têm `canonical`/`hreflang` reais; o `<head>` traz comentário com os links a substituir ao copiar.
 - `project.css` só é criado quando a composição do projeto não puder ser resolvida pelos componentes compartilhados.
 - CSS de categoria só é criado quando o primeiro projeto daquela categoria precisar dele.
 - As imagens do projeto são compartilhadas entre `index.html` e `index.en.html`.
@@ -410,12 +409,11 @@ portfolio/
 
 | Categoria | Seções de referência |
 |---|---|
-| Branding | Contexto · conceito · desenvolvimento · logotipo e elementos · paleta e tipografia · aplicações · resultados · ficha técnica |
-| Ilustração e vetor | Apresentação da obra · galeria · detalhes ampliados · processo (opcional) · ficha técnica |
-| Software e produtos digitais | Apresentação · problema e objetivos · funcionalidades · interface e UX · desenvolvimento · tecnologias · demonstração |
-| Produção gráfica | Apresentação · aplicação · desenvolvimento · materiais e especificações · processo produtivo · resultado final |
+| Branding | Contexto · conceito · sistema visual (logotipo, elementos, paleta, tipografia) · aplicações · resultados (opcional) · ficha técnica |
+| Ilustração e vetor | Apresentação · galeria · detalhes (opcionais) · contexto/processo (opcionais) · ficha mínima. Coletâneas mantêm apenas galeria e ficha. |
+| Software e produtos digitais | Contexto/problema · objetivos/funcionalidades · interface e UX · decisões técnicas · contribuição · tecnologias · status · demonstração (opcional) |
 
-As seções são referências, não um schema obrigatório. Cada projeto pode omitir, reordenar ou substituir blocos.
+As seções são referências, não um schema obrigatório. Cada projeto pode omitir, reordenar ou substituir blocos. Não há modelo próprio para Produção Gráfica; quando houver material gráfico, ele entra como galeria/coletânea de ilustração ou no currículo.
 
 ### 7.2 Componentes compartilhados
 
@@ -445,7 +443,9 @@ As seções são referências, não um schema obrigatório. Cada projeto pode om
 - O modelo não deve ser editado como se fosse uma página publicada; copiar primeiro.
 - Modelos são internos, não páginas públicas do portfólio.
 - Modelos não devem aparecer na navegação nem no arquivo.
-- Modelos devem ter `noindex` e não devem ser listados no sitemap, se houver.
+- Modelos devem ter `noindex, nofollow`, não devem ser listados no sitemap, se houver, e não têm `canonical`/`hreflang` reais enquanto forem internos; comentários no `<head>` indicam o que substituir ao criar uma página real.
+- Cada categoria tem par PT/EN, com IDs equivalentes e sequência de tags preservada.
+- Ao copiar, os caminhos relativos não mudam: `_templates/` e `pages/projects/<slug>/` têm a mesma profundidade.
 
 ### 7.4 CSS de categoria e de projeto
 
@@ -465,7 +465,9 @@ Ordem de carregamento sugerida:
 - CSS de categoria: composições compartilhadas por projetos da mesma categoria.
 - CSS de projeto: exceções de layout, proporção de capa, galerias específicas.
 - Não alterar a paleta global nem a tipografia para simular a identidade de um projeto; a identidade do projeto deve aparecer no conteúdo, não no chrome do site.
-- Evitar criar CSS vazio ou preventivo.
+- Evitar criar CSS vazio ou preventivo. Nenhum CSS de categoria ou de projeto foi criado na F4; os modelos usam somente os componentes existentes.
+- CSS adicional só entra quando a validação de um projeto real exigir.
+- CSS de `print` não faz parte do escopo; o conteúdo gráfico fica no currículo ou em coletâneas.
 
 ---
 
@@ -473,7 +475,7 @@ Ordem de carregamento sugerida:
 
 Neste fluxo, `[CASA]` indica produção de material visual, `[REMOTO]` edição no repositório e `[QUALQUER]` redação, tradução ou revisão.
 
-1. Escolher o modelo da categoria em `pages/projects/_templates/`.
+1. Escolher o par de modelos da categoria em `pages/projects/_templates/` (`<base>.html` e `<base>.en.html`).
 2. Copiar o modelo para `pages/projects/<slug>/index.html` (`[REMOTO]`).
 3. Copiar e traduzir para `pages/projects/<slug>/index.en.html` (`[REMOTO]` para os arquivos; `[QUALQUER]` para a tradução).
 4. Criar `images/` e adicionar as imagens otimizadas (`[CASA]` para produzir/selecionar; `[REMOTO]` para inserir no projeto).
@@ -486,7 +488,7 @@ Neste fluxo, `[CASA]` indica produção de material visual, `[REMOTO]` edição 
 6. Traduzir a versão inglesa com paridade de conteúdo.
 7. Atualizar `lang`, `title`, `meta description`, `hreflang`, `canonical` e o seletor de idioma.
 8. Atualizar IDs/âncoras e `aria-labelledby`; remover IDs duplicados.
-9. Remover seções opcionais que não se aplicam.
+9. Remover seções opcionais que não se aplicam, substituir os links de exemplo por `canonical`/`hreflang` reais e remover `noindex` e o aviso interno.
 10. Adicionar o projeto ao arquivo:
     - `pages/projects/index.html`;
     - `pages/projects/index.en.html`.
@@ -506,7 +508,7 @@ Neste fluxo, `[CASA]` indica produção de material visual, `[REMOTO]` edição 
 - Imagens locais: `images/...`.
 - Links para outro projeto: `../<slug>/index.html` ou `../<slug>/index.en.html`.
 
-Como o modelo e a pasta do projeto têm a mesma profundidade, apenas os nomes dos arquivos e o idioma do conteúdo mudam.
+Como o modelo e a pasta do projeto têm a mesma profundidade, os caminhos não mudam; apenas os nomes dos arquivos, os metadados e o conteúdo são adaptados.
 
 ---
 
@@ -607,9 +609,9 @@ As etiquetas não substituem as dependências entre fases. Elas apenas indicam o
 | **F1** | Concluída com pendência editorial | `[REMOTO]` + `[QUALQUER]` | Páginas institucionais PT/EN e troca de idioma implementadas; currículo final e Tally dependem de conteúdo/F2. |
 | **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura e código remotos concluídos; capturas ou assets visuais do Tally seguem pendentes em casa. |
 | **F3** | Concluída | `[REMOTO]` | Arquivo, navegação e links concluídos no repositório. |
-| **F4** | Não iniciada | `[REMOTO]` + `[CASA]` condicional | Templates e HTML remotos; referências visuais podem vir de casa. |
+| **F4** | Concluída | `[REMOTO]` | Seis modelos PT/EN internos concluídos; sem CSS novo e sem páginas públicas. |
 | **F5** | Não iniciada | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. |
-| **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Ilustração e produção gráfica dependem de materiais originais; HTML/CSS no repo. |
+| **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Ilustração depende de materiais originais; HTML/CSS no repo. |
 | **F7** | Não iniciada | `[REMOTO]` | Software e acesso aos repositórios de programação no PC do trabalho. |
 | **F8** | Não iniciada | `[QUALQUER]` + `[REMOTO]` + `[CASA]` | Curadoria e textos em qualquer lugar; implementação remota; imagens finais em casa. |
 | **F9** | Não iniciada | `[REMOTO]` + `[CASA]` | QA técnico remoto; validação visual final pode exigir casa. |
@@ -695,7 +697,7 @@ Os rótulos visíveis continuam em português ou inglês, conforme a página. Co
 
 ## 12. Roadmap de implementação
 
-Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase 1 foi concluída com pendência editorial no currículo; as Fases 2 e 3 estão concluídas. Nenhuma fase deve introduzir build, backend ou dependências.
+Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 estão concluídas. Nenhuma fase deve introduzir build, backend ou dependências.
 
 | Fase | Status | Etiquetas | Objetivo | Entregáveis | Critério de conclusão |
 |---|---|---|---|---|---|
@@ -703,9 +705,9 @@ Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase
 | **F1** | Concluída com pendência editorial | `[REMOTO]` + `[QUALQUER]` | Fundação bilíngue do shell | Seletor de idioma no header e menu móvel; `lang`, `hreflang`, `canonical`; páginas institucionais PT/EN; normalização de IDs e âncoras. O currículo pode ficar em rascunho até a fonte `.tex` estar disponível. | Troca de idioma funciona nas páginas institucionais, via `file://`, sem JavaScript. O currículo está em rascunho PT/EN e só será considerado final quando o par estiver conferido com o `.tex`. |
 | **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura de projetos | Tally migrado para `pages/projects/tally/`; `index.html` e `index.en.html`; suporte a imagens nos cards/placas; links da home e do currículo atualizados; proteção contra tradução automática. | Tally abre nos dois idiomas, com o mesmo visual e sem overflow. |
 | **F3** | Concluída | `[REMOTO]` | Arquivo de projetos | `pages/projects/index.html` e `index.en.html`; nav, rodapé, breadcrumbs e home atualizados; entradas reais sem página com status explícito; CSS escopado de arquivo. | Arquivo lista o inventário aprovado, agrupado por categoria; links funcionam e não apontam para páginas inexistentes. |
-| **F4** | Não iniciada | `[REMOTO]` + `[CASA]` condicional | Modelos editoriais internos | Criar `pages/projects/_templates/branding.html`, `illustration.html`, `software.html`, `print.html`; documentar seções e CSS opcional. | Modelos abrem via `file://`, não aparecem na navegação e servem de base para cópia. |
+| **F4** | Concluída | `[REMOTO]` | Modelos editoriais internos | Criar seis arquivos em `pages/projects/_templates/`: `branding`, `illustration` e `software`, cada um em `.html` e `.en.html`; documentar caminhos relativos e adaptações na cópia; sem CSS novo, sem páginas públicas e sem alterações em Tally, home, arquivo, páginas institucionais ou `main.js`. | Modelos abrem via `file://` e HTTP local, usam `noindex, nofollow`, têm pares PT/EN equivalentes, não recebem links públicos e servem de base para cópia. |
 | **F5** | Não iniciada | `[CASA]` + `[REMOTO]` | Piloto de Branding | Primeiro projeto real de branding PT/EN; CSS de categoria/projeto apenas se necessário. | Projeto completo, responsivo, com ficha e aplicações. |
-| **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Pilotos de Ilustração e Produção Gráfica | Primeiros projetos reais das duas categorias; ajustes de galeria e mídia. | Os três modelos visuais usam a mesma base sem parecer o mesmo template. |
+| **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Piloto de Ilustração | Primeiros projetos reais da categoria; ajustes de galeria e mídia. | Os modelos visuais de Branding e Ilustração mantêm base comum sem parecer o mesmo template. |
 | **F7** | Não iniciada | `[REMOTO]` | Software e conteúdo real | Transformar Tally em projeto real ou substituí-lo; completar projetos de software. | Página de software com problema, interface, tecnologias e demonstração. |
 | **F8** | Não iniciada | `[QUALQUER]` + `[REMOTO]` + `[CASA]` | Curadoria e conteúdo completo | Home com seleção final; arquivo completo; currículo fiel ao `.tex` e com seleção; traduções pareadas. | Nenhum projeto publicado sem par PT/EN; nenhuma contagem obsoleta. |
 | **F9** | Não iniciada | `[REMOTO]` + `[CASA]` | QA e publicação | Revisão de links, acessibilidade, performance, imagens, responsividade, `file://`, HTTP e GitHub Pages; atualização do README. | Checklist da seção 13 completo. |
@@ -831,6 +833,8 @@ Não fazem parte do projeto:
 | Alternância de idioma | Aprovada | Links HTML convencionais, sem JavaScript; permanece na página equivalente. |
 | Par publicado | Aprovada | PT e EN precisam estar prontos para a página contar como publicada. |
 | Templates internos | Aprovada | Ficam em `pages/projects/_templates/`, não são páginas públicas e não entram na navegação. |
+| Três famílias editoriais | Aprovada | Branding, Ilustração e Software; Produção Gráfica não tem modelo próprio nesta etapa. |
+| Modelos PT/EN | Aprovada | Cada categoria tem par `.html`/`.en.html`, com `noindex, nofollow` e sem `canonical`/`hreflang` até virar página real. |
 | Fonte de verdade | Aprovada | Página do projeto define o conteúdo; arquivo é o índice completo; home é curada. |
 | Placeholders antecipados | Aprovada | Estrutura pode ser preparada antes dos materiais reais, sem inventar conteúdo. |
 | Currículo | Aprovada | Baseado fielmente no `.tex` existente; tradução pode ser posterior. |
@@ -838,7 +842,7 @@ Não fazem parte do projeto:
 | Alternativa `/pt/` + `/en/` | Descartada | Não será adotada nesta fase. |
 | PDF do currículo | Pendente de conteúdo | Definir PT, EN ou bilíngue quando o currículo for consolidado. |
 | Quantidade de destaques | Recomendação | 5–6 projetos, definidos por curadoria; não é bloqueio. |
-| Pastas de categoria | Recomendação | `branding`, `illustration`, `software`, `print`, criadas conforme necessidade. |
+| Pastas de categoria | Recomendação | `branding`, `illustration` e `software`, criadas conforme necessidade. |
 
 ### 16.2 Pendências operacionais
 
@@ -851,10 +855,11 @@ Não fazem parte do projeto:
 
 ## 17. Próximo passo
 
-1. As Fases 0, 1, 2 e 3 estão concluídas; o encerramento formal inclui o commit e o push da F3.
+1. As Fases 0, 1, 2, 3 e 4 estão concluídas; o encerramento formal inclui o commit e o push da F4.
 2. A Fase 1 tem uma pendência editorial: o currículo PT/EN é rascunho e precisa ser conferido com o `.tex` antes de ser considerado final.
 3. A Fase 3 entregou o arquivo bilíngue, atualizou a navegação global e manteve projetos sem página como entradas não linkáveis; não criou templates nem páginas individuais.
-4. Aguardar autorização explícita para iniciar a F4; não começar automaticamente.
-5. Ao iniciar uma fase, seguir o ciclo de execução da seção 12 e sincronizar pelo GitHub.
+4. A Fase 4 entregou seis modelos internos PT/EN para Branding, Ilustração e Software, documentou caminhos e adaptações e não alterou páginas públicas, CSS ou `main.js`.
+5. Próximo passo: F5 — piloto de Branding, somente após autorização explícita; não começar automaticamente.
+6. Ao iniciar uma fase, seguir o ciclo de execução da seção 12 e sincronizar pelo GitHub.
 
-A F3 alterou o protótipo: criou o arquivo em `pages/projects/`, renomeou a seção da home para “Seleção de projetos”, removeu a contagem fixa, apontou a navegação global para o arquivo e adicionou CSS escopado para os cards de catálogo.
+A F3 alterou o protótipo: criou o arquivo em `pages/projects/`, renomeou a seção da home para “Seleção de projetos”, removeu a contagem fixa, apontou a navegação global para o arquivo e adicionou CSS escopado para os cards de catálogo. A F4 acrescentou os modelos editoriais internos em `pages/projects/_templates/`, atualizou `README.md` e este roadmap e manteve Tally, home, arquivo, páginas institucionais, CSS e `main.js` intactos.

@@ -38,8 +38,15 @@ portfolio/
 │   ├── contact.html
 │   ├── contact.en.html
 │   └── projects/
-│       ├── index.html             # arquivo PT
-│       ├── index.en.html          # arquivo EN
+│       ├── index.html                 # arquivo PT
+│       ├── index.en.html              # arquivo EN
+│       ├── _templates/                # modelos internos (não publicados)
+│       │   ├── branding.html
+│       │   ├── branding.en.html
+│       │   ├── illustration.html
+│       │   ├── illustration.en.html
+│       │   ├── software.html
+│       │   └── software.en.html
 │       └── tally/
 │           ├── index.html             # projeto PT
 │           ├── index.en.html          # projeto EN
@@ -118,6 +125,46 @@ Ao substituir um SVG, mantenha o elemento dentro do mesmo slot e informe `width`
 
 Projetos reais sem página individual aparecem como cards não linkáveis, com status “Em preparação” / “In preparation”. Nenhum link aponta para página inexistente; quando houver conteúdo suficiente, a entrada passa a ser um link sem mudar a estrutura do arquivo.
 
+## Modelos editoriais
+
+`pages/projects/_templates/` contém seis arquivos internos, em pares PT/EN:
+
+| Modelo | Arquivos | Uso |
+|---|---|---|
+| Branding | `branding.html`, `branding.en.html` | Identidade visual: contexto, conceito, sistema gráfico e aplicações. |
+| Ilustração | `illustration.html`, `illustration.en.html` | Galeria primeiro; contexto e processo são opcionais. Coletâneas usam a versão enxuta indicada em comentário. |
+| Software | `software.html`, `software.en.html` | Contexto, problema, funcionalidades, UX/UI, decisões técnicas, contribuição, tecnologias e status. |
+
+Os modelos **não são páginas publicadas**: não entram na navegação, no arquivo, na home nem no currículo. Cada arquivo tem `noindex, nofollow`. Enquanto permanecerem internos, **não há `canonical` nem `hreflang` reais**: o `<head>` traz apenas um comentário com os links de exemplo que devem ser substituídos ao criar uma página real.
+
+### Copiando um modelo para um projeto
+
+1. Copie o par para `pages/projects/<slug>/`, renomeando:
+   - `branding.html` → `index.html`
+   - `branding.en.html` → `index.en.html`
+   - o mesmo vale para `illustration` e `software`.
+2. Substitua todos os placeholders `[...]` nas duas versões.
+3. Atualize `title`, `meta description`, breadcrumb, seletor de idioma, `lang` e o rótulo final da navegação.
+4. Substitua o comentário de SEO do `<head>` pelos links reais de `canonical`, `hreflang` e `x-default` do projeto.
+5. Substitua os SVGs de placeholder por imagens em `images/`, mantendo `width`, `height`, `alt` traduzido, `loading="lazy"` abaixo da dobra e `decoding="async"` quando aplicável.
+6. Traduza legendas, notas laterais, avisos e textos de interface. IDs e âncoras técnicas devem permanecer iguais nas duas versões.
+7. Remova o aviso “Modelo interno” / “Internal template” somente quando o conteúdo real estiver revisado.
+8. Atualize o arquivo de projetos, a home e o currículo nas fases seguintes, quando aplicável.
+
+### Caminhos relativos
+
+A pasta `_templates/` tem a mesma profundidade de `pages/projects/<slug>/`. Por isso, os caminhos **não mudam** ao copiar o modelo:
+
+| Destino | PT | EN |
+|---|---|---|
+| CSS/JS compartilhados | `../../../assets/...` | `../../../assets/...` |
+| Home | `../../../index.html` | `../../../index.en.html` |
+| Arquivo de projetos | `../index.html` | `../index.en.html` |
+| Sobre / Currículo / Contato | `../../about.html`, `../../curriculum.html`, `../../contact.html` | `../../about.en.html`, `../../curriculum.en.html`, `../../contact.en.html` |
+| Imagens do projeto | `images/...` | `images/...` |
+
+Todos os caminhos são relativos, sem iniciar com `/`. Assim, os modelos e os futuros projetos funcionam por `file://`, por servidor HTTP local e no GitHub Pages. A pasta `_templates` é ignorada pelo Jekyll; isso é intencional, pois os modelos são internos. Nenhum CSS novo foi criado na F4: os modelos reaproveitam `.case`, `.case-section`, `.case-gallery`, `.plate`, `.process`, `.specs` e os demais componentes existentes.
+
 ## O que revisar antes de publicar
 
 Substitua os placeholders em todas as páginas:
@@ -132,9 +179,9 @@ Substitua os placeholders em todas as páginas:
 
 ## Adicionar um novo projeto
 
-O fluxo completo está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): templates internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
+O fluxo completo está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): modelos internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
 
-A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. O mosaico da home segue manual, em `index.html`/`components.css`. Os templates internos pertencem à F4 e ainda não existem.
+A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. A F4 criou os seis modelos editoriais internos, sem páginas públicas de demonstração e sem CSS novo. O mosaico da home segue manual, em `index.html`/`components.css`.
 
 ## Desenvolvimento em dois computadores
 
@@ -176,8 +223,10 @@ O push é feito manualmente ao final de cada fase concluída. A ativação do Gi
 
 - Conteúdo, imagem de retrato, e-mail e links são provisórios.
 - Não há formulário de contato funcional, CMS, banco de dados ou integração externa.
-- A versão em inglês cobre páginas institucionais, Tally e arquivo de projetos.
+- A versão em inglês cobre páginas institucionais, Tally, arquivo de projetos e os seis modelos internos.
 - Apenas Tally possui página interna demonstrativa; no arquivo, os demais projetos são entradas reais sem página individual, identificadas como “em preparação”.
+- Os modelos da F4 são internos e estão fora da navegação e do índice: não há páginas públicas de demonstração para Branding, Ilustração ou Software.
+- Os modelos usam placeholders e SVGs neutros. Nenhum conteúdo de projeto foi inventado, e nenhum CSS específico por categoria foi criado na F4.
 - O mosaico de projetos usa posições explícitas de grade. Novos cards exigem ajuste manual da composição em desktop e tablet.
 - O PDF do currículo ainda não existe; o botão está visualmente desativado. O par PT/EN atual é um rascunho e deve ser conciliado com o `.tex` existente.
-- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2 e 3 foram concluídas, sem imagens reais e com o arquivo de projetos já publicado.
+- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 foram concluídas, sem imagens reais e com o arquivo de projetos já publicado.
