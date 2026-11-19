@@ -410,6 +410,18 @@
     gap: 8px;
   }
 
+  .archive__card--feature {
+    grid-template-columns: 1fr;
+  }
+
+  .archive__card--feature .archive__card-top,
+  .archive__card--feature .archive__card-title,
+  .archive__card--feature .archive__card-note,
+  .archive__card--feature .archive__contrib,
+  .archive__card--feature .archive__card-foot {
+    grid-column: 1;
+  }
+
   .card--tally,
   .card--argos,
   .card--identity,

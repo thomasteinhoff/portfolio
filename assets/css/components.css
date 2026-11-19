@@ -491,6 +491,142 @@
 }
 
 /* --------------------------------------------------------------------------
+   Project archive
+   -------------------------------------------------------------------------- */
+
+.archive__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 18px;
+  margin-top: clamp(22px, 3vw, 34px);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.archive__nav a {
+  display: inline-flex;
+  gap: 6px;
+  transition: color 0.18s var(--ease);
+}
+
+.archive__nav a:hover,
+.archive__nav a:focus-visible {
+  color: var(--signal-text);
+}
+
+.archive__section {
+  margin-top: clamp(28px, 4vw, 52px);
+}
+
+.archive__section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.archive__section-head h2 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.archive__section-head .mono {
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.archive__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: var(--gutter);
+  margin-top: var(--gutter);
+}
+
+.archive__card {
+  min-height: 180px;
+  padding: 14px 15px 16px;
+  justify-content: flex-start;
+}
+
+.archive__card--link:hover,
+.archive__card--link:focus-visible {
+  border-color: var(--ink);
+}
+
+.archive__card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.archive__card-top span:last-child {
+  color: var(--signal-text);
+}
+
+.archive__card-title {
+  margin-top: 18px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.archive__card-note {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.archive__card--link .archive__card-title::after {
+  content: " ↗";
+  color: var(--signal);
+}
+
+.archive__card--feature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 10px 28px;
+}
+
+.archive__card--feature .archive__card-top,
+.archive__card--feature .archive__card-title {
+  grid-column: 1;
+}
+
+.archive__card--feature .archive__card-note,
+.archive__card--feature .archive__contrib,
+.archive__card--feature .archive__card-foot {
+  grid-column: 2;
+}
+
+.archive__contrib {
+  margin-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.archive__contrib li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive__card-foot {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
    Editorial page blocks (about, curriculum, contact)
    -------------------------------------------------------------------------- */
 

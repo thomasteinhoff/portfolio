@@ -24,7 +24,7 @@ Não há dependências externas obrigatórias, ferramentas de build, requisiçõ
 
 ## Estrutura
 
-Estrutura atual do protótipo. Todas as páginas publicadas têm par PT/EN, incluindo o Tally. O arquivo de projetos e os templates internos pertencem a fases seguintes e estão descritos no [`ROADMAP.md`](ROADMAP.md).
+Estrutura atual do protótipo. Todas as páginas publicadas têm par PT/EN, incluindo o Tally e o arquivo de projetos. Os templates internos pertencem à F4 e estão descritos no [`ROADMAP.md`](ROADMAP.md).
 
 ```text
 portfolio/
@@ -38,6 +38,8 @@ portfolio/
 │   ├── contact.html
 │   ├── contact.en.html
 │   └── projects/
+│       ├── index.html             # arquivo PT
+│       ├── index.en.html          # arquivo EN
 │       └── tally/
 │           ├── index.html             # projeto PT
 │           ├── index.en.html          # projeto EN
@@ -67,7 +69,7 @@ portfolio/
 
 Português é o idioma principal e permanece nos caminhos atuais. O inglês usa o sufixo `.en.html` no mesmo diretório, por exemplo `index.en.html` e `pages/about.en.html`.
 
-A troca de idioma é feita por links HTML comuns, sem JavaScript, e aponta para a página equivalente. O idioma atual é marcado com `aria-current="true"`. O par PT/EN do Tally está completo; o currículo EN continua rascunho até a conferência com o `.tex`.
+A troca de idioma é feita por links HTML comuns, sem JavaScript, e aponta para a página equivalente. O idioma atual é marcado com `aria-current="true"`. O Tally e o arquivo de projetos têm par PT/EN completo; o currículo EN continua rascunho até a conferência com o `.tex`.
 
 Todas as páginas públicas usam `translate="no"` no elemento `<html>` e `<meta name="google" content="notranslate">` no `<head>` para impedir a tradução automática do navegador. Os textos já existem nos dois idiomas; essa proteção apenas evita que a interface seja reescrita por ferramentas externas.
 
@@ -110,6 +112,12 @@ Os slots visuais existentes aceitam `<img>` no lugar do `<svg>` inline, sem alte
 
 Ao substituir um SVG, mantenha o elemento dentro do mesmo slot e informe `width`, `height`, `alt` traduzido, `loading="lazy"` para imagens abaixo da dobra e `decoding="async"` quando aplicável. Imagens sem texto são compartilhadas entre PT e EN na pasta `images/` do projeto; imagens com texto exigem variantes por idioma. Nenhuma imagem real foi adicionada nesta fase: `assets/images/` e `pages/projects/tally/images/` contêm apenas `.gitkeep`.
 
+## Arquivo de projetos
+
+`pages/projects/index.html` e `pages/projects/index.en.html` formam o catálogo completo, agrupado em Branding, Ilustração e Software. A home mantém a seleção curada e linka para o arquivo.
+
+Projetos reais sem página individual aparecem como cards não linkáveis, com status “Em preparação” / “In preparation”. Nenhum link aponta para página inexistente; quando houver conteúdo suficiente, a entrada passa a ser um link sem mudar a estrutura do arquivo.
+
 ## O que revisar antes de publicar
 
 Substitua os placeholders em todas as páginas:
@@ -126,7 +134,7 @@ Substitua os placeholders em todas as páginas:
 
 O fluxo completo está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): templates internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
 
-A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. O mosaico da home segue manual, em `index.html`/`components.css`. O arquivo canônico e os templates internos pertencem a F3 e F4 e ainda não existem.
+A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. O mosaico da home segue manual, em `index.html`/`components.css`. Os templates internos pertencem à F4 e ainda não existem.
 
 ## Desenvolvimento em dois computadores
 
@@ -168,8 +176,8 @@ O push é feito manualmente ao final de cada fase concluída. A ativação do Gi
 
 - Conteúdo, imagem de retrato, e-mail e links são provisórios.
 - Não há formulário de contato funcional, CMS, banco de dados ou integração externa.
-- A versão em inglês cobre as páginas institucionais e o Tally; o arquivo de projetos pertence à F3.
-- Apenas Tally possui página interna demonstrativa; os demais cards indicam “em preparação”.
+- A versão em inglês cobre páginas institucionais, Tally e arquivo de projetos.
+- Apenas Tally possui página interna demonstrativa; no arquivo, os demais projetos são entradas reais sem página individual, identificadas como “em preparação”.
 - O mosaico de projetos usa posições explícitas de grade. Novos cards exigem ajuste manual da composição em desktop e tablet.
 - O PDF do currículo ainda não existe; o botão está visualmente desativado. O par PT/EN atual é um rascunho e deve ser conciliado com o `.tex` existente.
-- A Fase 1 foi concluída com pendência editorial no currículo; a Fase 2 (estrutura de projetos) foi concluída, sem imagens reais e sem arquivo de projetos.
+- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2 e 3 foram concluídas, sem imagens reais e com o arquivo de projetos já publicado.
