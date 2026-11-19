@@ -1,14 +1,14 @@
 # Portfólio — Roadmap de arquitetura e conteúdo
 
-> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo.
+> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fase 2 concluída.
 >
 > **Baseline do protótipo:** `5b39f07 — Initial portfolio prototype — v0.1`
 >
 > **Branch:** `main`
 >
-> **Próxima fase:** F2 — planejada, não iniciada.
+> **Próxima fase:** F3 — arquivo de projetos.
 >
-> **Escopo deste documento:** decisões de arquitetura, internacionalização, conteúdo, estrutura de arquivos, ambientes de trabalho e entregas futuras. A implementação da F2 em diante não faz parte desta etapa.
+> **Escopo deste documento:** decisões de arquitetura, internacionalização, conteúdo, estrutura de arquivos, ambientes de trabalho e entregas futuras. A implementação da F3 em diante não faz parte desta etapa.
 
 > **Decisão de i18n consolidada:** português é o idioma principal, na estrutura atual; inglês usa o sufixo `.en.html`. A alternância é feita por links HTML convencionais, sem JavaScript, e deve levar à página equivalente no outro idioma.
 
@@ -97,7 +97,7 @@ O protótipo v0.1 contém:
 
 A Fase 0 está concluída: as decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e fluxo de execução foram consolidadas neste documento e no README. A Fase 1 foi implementada para as páginas institucionais: home, Sobre, Currículo e Contato têm versões PT/EN, troca de idioma por links HTML, metadados e âncoras normalizadas. O currículo continua em rascunho editorial até a fonte `.tex` ser localizada e conferida.
 
-O protótipo institucional agora é bilíngue, mas a página demonstrativa do Tally permanece apenas em português e ainda usa a estrutura provisória (`pages/projects/project-template.html`). A migração para a estrutura-alvo, o arquivo de projetos, a versão inglesa do Tally e os templates começam na F2, mediante autorização.
+O protótipo institucional é bilíngue. Na F2, a página demonstrativa do Tally migrou para `pages/projects/tally/`, recebeu o par PT/EN e passou a abrigar os componentes com suporte a imagens. O arquivo de projetos e os templates internos permanecem para F3 e F4.
 
 ### Pontos fortes a preservar
 
@@ -112,10 +112,10 @@ O protótipo institucional agora é bilíngue, mas a página demonstrativa do Ta
 1. A home acumula o papel de vitrine e de arquivo completo.
 2. O mosaico usa classes e posições ligadas a projetos específicos.
 3. Existe apenas um modelo de projeto, ainda demonstrativo.
-4. Imagens reais ainda não têm suporte claro nos cards e placas.
+4. Imagens reais ainda não foram produzidas; desde a F2 os componentes já aceitam `<img>` nos slots existentes.
 5. Cabeçalho, menu e rodapé são duplicados.
 6. Metadados são repetidos entre home, currículo, índice e página do projeto.
-7. Não existe versão em inglês.
+7. A versão em inglês cobre as páginas publicadas, mas o arquivo e os templates ainda não existem.
 8. Alguns identificadores técnicos e âncoras ainda estão em português, contrariando a nova regra de nomenclatura.
 
 ---
@@ -605,7 +605,7 @@ As etiquetas não substituem as dependências entre fases. Elas apenas indicam o
 |---|---|---|---|
 | **F0** | Concluída | `[QUALQUER]` | Consolidação documental, sem implementação. |
 | **F1** | Concluída com pendência editorial | `[REMOTO]` + `[QUALQUER]` | Páginas institucionais PT/EN e troca de idioma implementadas; currículo final e Tally dependem de conteúdo/F2. |
-| **F2** | Não iniciada | `[REMOTO]` + `[CASA]` condicional | Estrutura e código remotos; capturas ou assets visuais do Tally podem depender de casa. |
+| **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura e código remotos concluídos; capturas ou assets visuais do Tally seguem pendentes em casa. |
 | **F3** | Não iniciada | `[REMOTO]` | Arquivo, navegação e links são trabalho de repositório. |
 | **F4** | Não iniciada | `[REMOTO]` + `[CASA]` condicional | Templates e HTML remotos; referências visuais podem vir de casa. |
 | **F5** | Não iniciada | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. |
@@ -695,13 +695,13 @@ Os rótulos visíveis continuam em português ou inglês, conforme a página. Co
 
 ## 12. Roadmap de implementação
 
-Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase 1 foi concluída com pendência editorial no currículo; a Fase 2 está planejada e não iniciada. Nenhuma fase deve introduzir build, backend ou dependências.
+Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase 1 foi concluída com pendência editorial no currículo; a Fase 2 está concluída. Nenhuma fase deve introduzir build, backend ou dependências.
 
 | Fase | Status | Etiquetas | Objetivo | Entregáveis | Critério de conclusão |
 |---|---|---|---|---|---|
 | **F0** | Concluída | `[QUALQUER]` | Consolidar o planejamento | `ROADMAP.md` e `README.md` revisados | Decisões, i18n, ambientes, estrutura e fases registradas. |
 | **F1** | Concluída com pendência editorial | `[REMOTO]` + `[QUALQUER]` | Fundação bilíngue do shell | Seletor de idioma no header e menu móvel; `lang`, `hreflang`, `canonical`; páginas institucionais PT/EN; normalização de IDs e âncoras. O currículo pode ficar em rascunho até a fonte `.tex` estar disponível. | Troca de idioma funciona nas páginas institucionais, via `file://`, sem JavaScript. O currículo está em rascunho PT/EN e só será considerado final quando o par estiver conferido com o `.tex`. |
-| **F2** | Não iniciada | `[REMOTO]` + `[CASA]` condicional | Estrutura de projetos | Migrar Tally para `pages/projects/tally/`; criar `index.html` e `index.en.html`; suporte a imagens nos cards/placas; slots genéricos na home. | Tally abre nos dois idiomas, com o mesmo visual e sem overflow. |
+| **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura de projetos | Tally migrado para `pages/projects/tally/`; `index.html` e `index.en.html`; suporte a imagens nos cards/placas; links da home e do currículo atualizados; proteção contra tradução automática. | Tally abre nos dois idiomas, com o mesmo visual e sem overflow. |
 | **F3** | Não iniciada | `[REMOTO]` | Arquivo de projetos | Criar `pages/projects/index.html` e `index.en.html`; atualizar nav, rodapé, breadcrumbs e home. | Arquivo lista pares publicados, agrupados por categoria; links funcionam. |
 | **F4** | Não iniciada | `[REMOTO]` + `[CASA]` condicional | Modelos editoriais internos | Criar `pages/projects/_templates/branding.html`, `illustration.html`, `software.html`, `print.html`; documentar seções e CSS opcional. | Modelos abrem via `file://`, não aparecem na navegação e servem de base para cópia. |
 | **F5** | Não iniciada | `[CASA]` + `[REMOTO]` | Piloto de Branding | Primeiro projeto real de branding PT/EN; CSS de categoria/projeto apenas se necessário. | Projeto completo, responsivo, com ficha e aplicações. |
@@ -845,15 +845,15 @@ Não fazem parte do projeto:
 - O arquivo `.tex` do currículo não está versionado neste repositório no momento. Localizar a fonte mais recente antes de editar o currículo; se estiver em outro repositório GitHub, a atividade é `[REMOTO]`. O par PT/EN atual é um rascunho de F1 e não substitui a conferência da fonte.
 - Materiais visuais originais, capturas, SVGs, imagens e mockups dependem do PC de casa e bloqueiam a conclusão visual de F5, F6, F8 e F9.
 - Nome, e-mail, links e conteúdo real dos projetos continuam provisórios; não inventar informações.
-- A página demonstrativa do Tally continua em português até a F2; não criar um par EN isolado antes da migração.
+- O Tally já tem par PT/EN e pasta `images/` preparada; imagens reais dependem do PC de casa e não foram inventadas.
 - O formato e o idioma do PDF do currículo serão definidos quando houver conteúdo consolidado.
 
 ## 17. Próximo passo
 
-1. A Fase 0 e a Fase 1 estão concluídas; o encerramento formal inclui o commit e o push desta entrega.
+1. As Fases 0, 1 e 2 estão concluídas; o encerramento formal inclui o commit e o push da F2.
 2. A Fase 1 tem uma pendência editorial: o currículo PT/EN é rascunho e precisa ser conferido com o `.tex` antes de ser considerado final.
-3. A Fase 2 está planejada, mas **não iniciada**.
-4. Aguardar autorização explícita para iniciar a F2; não começar automaticamente.
+3. A Fase 2 entregou o Tally bilíngue e os slots com suporte a imagens; não criou o arquivo de projetos nem os templates.
+4. Aguardar autorização explícita para iniciar a F3; não começar automaticamente.
 5. Ao iniciar uma fase, seguir o ciclo de execução da seção 12 e sincronizar pelo GitHub.
 
-A F1 alterou o protótipo: adicionou as páginas institucionais EN, a troca de idioma, metadados e a normalização de IDs/âncoras. A página do Tally e o arquivo de projetos continuam fora do escopo desta fase.
+A F2 alterou o protótipo: moveu o Tally para `pages/projects/tally/`, criou o par PT/EN, atualizou os links da home e do currículo, bloqueou a tradução automática em todas as páginas e preparou os componentes para receber imagens sem alterar o layout.
