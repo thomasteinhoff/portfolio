@@ -1367,6 +1367,10 @@ a.contact__channel:hover {
   grid-column: span 6;
 }
 
+.case-gallery .plate--square {
+  grid-column: span 5;
+}
+
 .plate {
   display: flex;
   flex-direction: column;
@@ -1391,6 +1395,10 @@ a.contact__channel:hover {
 
 .plate--half .plate__canvas {
   aspect-ratio: 640 / 440;
+}
+
+.plate--square .plate__canvas {
+  aspect-ratio: 1 / 1;
 }
 
 .plate__canvas > svg,
@@ -1691,6 +1699,7 @@ a.contact__channel:hover {
   .case-gallery .plate--wide,
   .case-gallery .plate--narrow,
   .case-gallery .plate--half,
+  .case-gallery .plate--square,
   .case-gallery__note {
     grid-column: 1 / -1;
   }
@@ -1699,6 +1708,10 @@ a.contact__channel:hover {
   .plate--narrow .plate__canvas,
   .plate--half .plate__canvas {
     aspect-ratio: 4 / 3;
+  }
+
+  .plate--square .plate__canvas {
+    aspect-ratio: 1 / 1;
   }
 
   .process {

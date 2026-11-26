@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1455 1000" width="1455" height="1000" role="img" aria-labelledby="ph-title ph-desc">
+  <title id="ph-title">Placeholder de imagem — 1455 × 1000</title>
+  <desc id="ph-desc">Área reservada para uma imagem final. Substitua este arquivo mantendo as proporções.</desc>
+  <rect width="1455" height="1000" fill="#F1EDE4"/>
+  <path d="M0 0L1455 1000M1455 0L0 1000" stroke="#C9C2B1" stroke-width="1"/>
+  <rect x="24" y="24" width="1407" height="952" fill="none" stroke="#C9C2B1" stroke-width="1"/>
+  <rect x="56" y="56" width="10" height="10" fill="#D6452B"/>
+  <text x="80" y="66" fill="#17160F" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" letter-spacing="2">PLACEHOLDER</text>
+  <text x="56" y="940" fill="#17160F" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" letter-spacing="1">1455 × 1000</text>
+  <text x="1399" y="940" fill="#17160F" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" letter-spacing="1" text-anchor="end">SUBSTITUIR / REPLACE</text>
+</svg>
