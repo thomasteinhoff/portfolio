@@ -1,6 +1,6 @@
 # Portfólio — Roadmap de arquitetura e conteúdo
 
-> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fases 2 e 3 concluídas; Fase 4 concluída; Fase 5 em andamento (Motoclube PT em revisão); Fase 7 em andamento (estudo do Tally publicado com mídias provisórias).
+> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fases 2 e 3 concluídas; Fase 4 concluída; Fase 5 em andamento (Motoclube PT concluída; Motoclube EN pendente); Fase 7 em andamento (estudo do Tally publicado com mídias provisórias).
 >
 > **Baseline do protótipo:** `5b39f07 — Initial portfolio prototype — v0.1`
 >
@@ -611,7 +611,7 @@ As etiquetas não substituem as dependências entre fases. Elas apenas indicam o
 | **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura e código remotos concluídos; capturas ou assets visuais do Tally seguem pendentes em casa. |
 | **F3** | Concluída | `[REMOTO]` | Arquivo, navegação e links concluídos no repositório. |
 | **F4** | Concluída | `[REMOTO]` | Seis modelos PT/EN internos concluídos; sem CSS novo e sem páginas públicas. |
-| **F5** | Em andamento | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. Etapa 1 concluída; Etapa 2 (Motoclube PT) em revisão. |
+| **F5** | Em andamento | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. Etapa 1 concluída; Etapa 2 (Motoclube PT) concluída; Etapa 3 (Motoclube EN) pendente. |
 | **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Ilustração depende de materiais originais; HTML/CSS no repo. |
 | **F7** | Em andamento | `[REMOTO]` + `[CASA]` | Estudo do Tally em PT/EN publicado; capturas sanitizadas e revisão final pendentes. |
 | **F8** | Não iniciada | `[QUALQUER]` + `[REMOTO]` + `[CASA]` | Curadoria e textos em qualquer lugar; implementação remota; imagens finais em casa. |

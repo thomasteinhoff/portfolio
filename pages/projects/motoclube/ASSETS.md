@@ -35,22 +35,24 @@ Este documento descreve o inventário previsto para o estudo de caso. Enquanto o
 
 ## Inventário
 
+As dimensões-alvo seguem as proporções das placas, para evitar cortes na exibição: `wide` 760/500 (1520 × 1000), `half` 640/440 (1455 × 1000), `narrow` 520/610 (852 × 1000), `square` 1/1 (1000 × 1000) e capa 1400/620.
+
 | Figura / seção | Arquivo | Formato | Dimensão | Uso | Status |
 |---|---|---|---|---|---|
 | Capa | `cover.webp` | WebP | 1400 × 620 | Imagem de abertura do estudo | Pendente |
 | 02 Conceito | `symbol-studies-01.webp` | WebP | 1520 × 1000 | Primeira prancha de estudos do símbolo | Pendente |
 | 02 Conceito | `symbol-studies-02.webp` | WebP | 1520 × 1000 | Segunda prancha de estudos do símbolo | Pendente |
 | 03 Símbolo | `logo-primary.svg` | SVG | 1200 × 1200 | Símbolo principal | Pendente |
-| 03 Símbolo | `logo-variations.svg` | SVG | 1600 × 1000 | Variações e composições | Pendente |
-| 04 Sistema visual | `palette.svg` | SVG | 1200 × 800 | Paleta de cores | Pendente |
-| 04 Sistema visual | `typography.svg` | SVG | 1200 × 800 | Tipografia e hierarquia | Pendente |
-| 04 Sistema visual | `clear-space.svg` | SVG | 1200 × 800 | Área de respiro e aplicação | Pendente |
+| 03 Símbolo | `logo-variations.svg` | SVG | 1520 × 1000 | Variações e composições | Pendente |
+| 04 Sistema visual | `palette.svg` | SVG | 1455 × 1000 | Paleta de cores | Pendente |
+| 04 Sistema visual | `typography.svg` | SVG | 1455 × 1000 | Tipografia e hierarquia | Pendente |
 | 04 Sistema visual | `profile-photo.webp` | WebP | 1000 × 1000 | Foto de perfil do clube | Pendente |
+| 04 Sistema visual | `clear-space.svg` | SVG | 1520 × 1000 | Área de respiro e aplicação | Pendente |
 | 05 Aplicações | `sticker-01.webp` | WebP | 1455 × 1000 | Aplicação em adesivo | Pendente |
-| 05 Aplicações | `instagram-profile.webp` | WebP | 1080 × 1350 | Perfil do clube no Instagram | Pendente |
-| 05 Aplicações | `guidelines-spread-01.webp` | WebP | 1600 × 1130 | Página do PDF de identidade | Pendente |
-| 05 Aplicações | `guidelines-spread-02.webp` | WebP | 1600 × 1130 | Página do PDF de identidade | Pendente |
-| 06 Resultado | `identity-guidelines.pdf` | PDF | A definir | PDF de apresentação da identidade | Pendente |
+| 05 Aplicações | `instagram-profile.webp` | WebP | 852 × 1000 | Perfil do clube no Instagram | Pendente |
+| 05 Aplicações | `guidelines-spread-01.webp` | WebP | 1455 × 1000 | Página do PDF de identidade | Pendente |
+| 05 Aplicações | `guidelines-spread-02.webp` | WebP | 1455 × 1000 | Página do PDF de identidade | Pendente |
+| 05 Aplicações | `identity-guidelines.pdf` | PDF | A definir | PDF de apresentação da identidade | Pendente |
 
 ## Textos alternativos provisórios
 

@@ -1,0 +1,36 @@
+/* Motoclube case study — scoped layout adjustments.
+   The approved plate ratios (1520 × 1000 studies, 1455 × 1000 sticker)
+   do not fit the 7+7 / 6+5 column pairs, so the individual spans are
+   adjusted here instead of cropping the assets or changing the shared CSS. */
+
+@media (min-width: 721px) {
+  .case-gallery .plate--studies {
+    grid-column: span 6;
+  }
+
+  .case-gallery .plate--sticker {
+    grid-column: span 7;
+  }
+
+  /* A landscape and a portrait plate in the same row would otherwise
+     stretch the shorter frame past its caption. */
+  .case-gallery {
+    align-items: start;
+  }
+}
+
+/* The shared rule turns every horizontal plate into 4:3 below 720 px,
+   which crops 12% to 36% of the assets. Restore the plate ratios. */
+@media (max-width: 720px) {
+  .plate--wide .plate__canvas {
+    aspect-ratio: 760 / 500;
+  }
+
+  .plate--half .plate__canvas {
+    aspect-ratio: 640 / 440;
+  }
+
+  .plate--narrow .plate__canvas {
+    aspect-ratio: 520 / 610;
+  }
+}

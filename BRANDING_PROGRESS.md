@@ -2,6 +2,17 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
+## 0. Atualização — Etapa 2 (Motoclube PT) concluída
+
+Registrada em 27 de novembro de 2026, depois do checkpoint original. As seções 1 a 7 abaixo descrevem o estado anterior e são mantidas como registro histórico.
+
+- Branch de trabalho: `portfolio-integration` (a `portfolio-branding` foi integrada em `d2b00a6`).
+- Etapa 2 encerrada e aprovada: correções de conteúdo e técnica (C1–C10), dimensões das oito figuras alinhadas aos placeholders, proporções das placas, `ASSETS.md` revisado, `hreflang` removido e `noindex, nofollow` aplicado, seletor EN com `lang` e texto `.sr-only`, contraste do próximo projeto corrigido.
+- Composição das galerias resolvida em `pages/projects/motoclube/project.css`, com escopo de página: `plate--studies` (Figs. 02/03), `plate--sticker` (Fig. 10), `align-items: start` e restauração das proporções das placas abaixo de 720 px.
+- A página PT continua sem versão EN, sem link na home e no arquivo de projetos, e com placeholders no lugar das imagens finais.
+- Pendências que seguem abertas para a Etapa 2: revisão em navegador real nas larguras críticas, navegação por teclado, foco visível e `prefers-reduced-motion`. As demais pendências listadas em 5.1 foram cumpridas.
+- Etapa 3 (Motoclube EN) não foi iniciada.
+
 ## 1. Estado geral
 
 | Item | Estado |
