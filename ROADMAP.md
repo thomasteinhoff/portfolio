@@ -820,7 +820,7 @@ Não fazem parte do projeto:
 - Filtros, busca, dark mode, analytics ou comentários.
 - Automação de deploy ou GitHub Actions.
 - Criar scripts ou sistemas adicionais de sincronização.
-- Criar `AGENTS.md` ou outros documentos sem necessidade concreta.
+- Criar documentos adicionais sem necessidade concreta.
 
 ---
 
@@ -840,6 +840,7 @@ Não fazem parte do projeto:
 | Placeholders antecipados | Aprovada | Estrutura pode ser preparada antes dos materiais reais, sem inventar conteúdo. |
 | Currículo | Aprovada | Baseado fielmente no `.tex` existente; tradução pode ser posterior. |
 | Ambientes de trabalho | Aprovada | PC do trabalho para repo/código/texto; PC de casa para materiais visuais; GitHub sincroniza. |
+| Diretrizes para agentes | Aprovada | `AGENTS.md` rastreado no repositório; o roadmap continua sendo a fonte de verdade para escopo e fases. |
 | Alternativa `/pt/` + `/en/` | Descartada | Não será adotada nesta fase. |
 | PDF do currículo | Pendente de conteúdo | Definir PT, EN ou bilíngue quando o currículo for consolidado. |
 | Quantidade de destaques | Recomendação | 5–6 projetos, definidos por curadoria; não é bloqueio. |
