@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google" content="notranslate">
-  <title>Tally — Estudo demonstrativo | Nome Sobrenome</title>
-  <meta name="description" content="Página demonstrativa de estudo de caso: Tally, aplicação pessoal de controle financeiro. Conteúdo e imagens provisórios.">
+  <title>Tally — estudo de caso de produto digital | Nome Sobrenome</title>
+  <meta name="description" content="Estudo de caso de produto digital: Tally, aplicativo desktop de controle financeiro pessoal, local-first. Contexto, arquitetura da informação, interface e decisões de produto.">
   <meta name="theme-color" content="#f1ede4">
   <link rel="canonical" href="https://thomasteinhoff.github.io/portfolio/pages/projects/tally/">
   <link rel="alternate" hreflang="pt-BR" href="https://thomasteinhoff.github.io/portfolio/pages/projects/tally/">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../../assets/css/style.css">
   <link rel="stylesheet" href="../../../assets/css/components.css">
   <link rel="stylesheet" href="../../../assets/css/responsive.css">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#content">Pular para o conteúdo</a>
@@ -76,7 +77,7 @@
     </div>
   </header>
 
-  <main id="content" class="case">
+  <main id="content" class="case case--software">
     <div class="shell">
       <nav class="breadcrumb" aria-label="Você está aqui">
         <a href="../../../index.html">Início</a>
@@ -88,10 +89,10 @@
 
       <header class="case__head">
         <div>
-          <p class="case__eyebrow"><span>Estudo 01</span> / página demonstrativa</p>
+          <p class="case__eyebrow"><span>Estudo 01</span> / Produto digital</p>
           <h1 class="case__title">Tally</h1>
         </div>
-        <p class="case__lede">Aplicação pessoal de controle financeiro. Uma estrutura editorial de demonstração para apresentar contexto, sistema visual e informações técnicas.</p>
+        <p class="case__lede">Aplicativo desktop de controle financeiro pessoal, local-first, desenhado para leitura precisa do patrimônio, das movimentações e dos compromissos.</p>
       </header>
 
       <dl class="case__meta">
@@ -101,406 +102,329 @@
         </div>
         <div>
           <dt>Tipo</dt>
-          <dd>Aplicação pessoal</dd>
+          <dd>Aplicativo desktop</dd>
         </div>
         <div>
-          <dt>Escopo</dt>
-          <dd>Em definição</dd>
+          <dt>Papel</dt>
+          <dd>Design de produto, UI e desenvolvimento</dd>
         </div>
         <div>
-          <dt>Status</dt>
-          <dd>Demonstração / 20—</dd>
+          <dt>Ano / status</dt>
+          <dd>2026 / v0.2.0 publicada</dd>
         </div>
       </dl>
 
       <div class="notice case__notice">
-        <span class="mono">Provisório</span>
-        <p>Esta página demonstra a estrutura de um estudo de caso. Textos, imagens e dados técnicos são provisórios e não descrevem o projeto final. Nenhum resultado, cliente ou funcionalidade foi inventado.</p>
+        <span class="mono">Nota do estudo</span>
+        <p>Este estudo documenta decisões de produto e interface a partir do histórico do projeto. Não inclui pesquisa com usuários, métricas de uso ou resultados financeiros. As capturas serão substituídas por versões com dados fictícios e valores ocultados. A interface do Tally está em português brasileiro; legendas e textos alternativos são traduzidos.</p>
       </div>
 
       <figure class="case__cover">
         <div class="case__cover-canvas">
           <svg viewBox="0 0 1400 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-          <defs>
-            <pattern id="cover-grid" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path d="M50 0H0V50" fill="none" stroke="#f1ede4" stroke-opacity=".065" stroke-width="1"/>
-            </pattern>
-            <pattern id="cover-dots" width="9" height="9" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1.4" fill="#f1ede4" fill-opacity=".45"/>
-            </pattern>
-            <pattern id="cover-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <line x1="0" y1="0" x2="0" y2="8" stroke="#d6452b" stroke-width="2.4"/>
-            </pattern>
-          </defs>
+            <defs>
+              <pattern id="tally-cover-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path d="M50 0H0V50" fill="none" stroke="#f1ede4" stroke-opacity=".07"/>
+              </pattern>
+            </defs>
+            <rect width="1400" height="620" fill="#17160f"/>
+            <rect width="1400" height="620" fill="url(#tally-cover-grid)"/>
 
-          <rect width="1400" height="620" fill="#17160f"/>
-          <rect width="1400" height="620" fill="url(#cover-grid)"/>
-
-          <g fill="#f1ede4" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.4">
-            <text x="42" y="46">ESTUDO / 01</text>
-            <text x="1358" y="46" text-anchor="end">TALLY — CONTROLE FINANCEIRO</text>
-            <text x="42" y="586">IMAGEM PROVISÓRIA / COMPOSIÇÃO DE ESTUDO</text>
-            <text x="1358" y="586" text-anchor="end">2026 / PROTÓTIPO 0.1</text>
-          </g>
-
-          <g stroke="#f1ede4" stroke-opacity=".4" stroke-width="1">
-            <path d="M24 64h12M30 58v12"/>
-            <path d="M1364 64h12M1370 58v12"/>
-            <path d="M24 556h12M30 550v12"/>
-            <path d="M1364 556h12M1370 550v12"/>
-          </g>
-
-          <circle cx="1160" cy="170" r="146" fill="none" stroke="#d6452b" stroke-width="2"/>
-          <circle cx="1160" cy="170" r="104" fill="none" stroke="#f1ede4" stroke-opacity=".16"/>
-          <circle cx="1160" cy="170" r="18" fill="#d6452b"/>
-          <circle cx="1160" cy="170" r="5" fill="#f1ede4"/>
-
-          <text x="54" y="456" fill="#f1ede4" font-family="'Bricolage Grotesque', sans-serif" font-size="252" font-weight="600" letter-spacing="-15">Tally</text>
-          <rect x="770" y="420" width="28" height="28" fill="#d6452b"/>
-
-          <g fill="#f1ede4" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.5">
-            <text x="60" y="504">CONTROLE PESSOAL / ESTUDO DE CASO</text>
-            <text x="60" y="524">PÁGINA DEMONSTRATIVA — CONTEÚDO PROVISÓRIO</text>
-          </g>
-
-          <g transform="rotate(-3 1090 415)">
-            <rect x="862" y="304" width="456" height="226" fill="#f1ede4" stroke="#17160f" stroke-width="1"/>
-            <text x="886" y="330" fill="#17160f" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="1.1">TALLY / REGISTRO PESSOAL</text>
-            <text x="884" y="388" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="40" font-weight="600" letter-spacing="-2">R$ —</text>
-            <path d="M886 400h120" stroke="#d6452b" stroke-width="3"/>
-
-            <g stroke="#17160f" stroke-opacity=".22">
-              <path d="M886 420h404M886 442h404M886 464h404M886 486h404"/>
+            <g fill="#f1ede4" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.4">
+              <text x="42" y="46">ESTUDO / 01</text>
+              <text x="1358" y="46" text-anchor="end">TALLY — CONTROLE FINANCEIRO</text>
+              <text x="42" y="586">MÍDIA PROVISÓRIA / A SUBSTITUIR</text>
+              <text x="1358" y="586" text-anchor="end">2026 / V0.2.0</text>
             </g>
-            <g fill="#17160f">
-              <rect x="886" y="427" width="24" height="10" fill-opacity=".12"/>
-              <rect x="920" y="429" width="76" height="5" fill-opacity=".32"/>
-              <rect x="1206" y="428" width="84" height="7" fill-opacity=".15"/>
 
-              <rect x="886" y="449" width="24" height="10" fill-opacity=".12"/>
-              <rect x="920" y="451" width="112" height="5" fill-opacity=".32"/>
-              <rect x="1222" y="450" width="68" height="7" fill-opacity=".15"/>
+            <text x="54" y="456" fill="#f1ede4" font-family="'Bricolage Grotesque', sans-serif" font-size="252" font-weight="600" letter-spacing="-15">Tally</text>
 
-              <rect x="886" y="471" width="24" height="10" fill-opacity=".12"/>
-              <rect x="920" y="473" width="62" height="5" fill-opacity=".32"/>
-              <rect x="1238" y="472" width="52" height="7" fill-opacity=".15"/>
+            <g transform="rotate(-2 1060 370)">
+              <rect x="850" y="250" width="420" height="240" fill="#17160f"/>
+              <image href="images/overview.png" x="850" y="250" width="420" height="240" preserveAspectRatio="xMidYMid meet"/>
+              <rect x="850" y="250" width="420" height="240" fill="none" stroke="#f1ede4" stroke-opacity=".45" stroke-width="1.2"/>
             </g>
-            <g fill="#d6452b">
-              <rect x="886" y="498" width="10" height="14"/>
-              <rect x="900" y="492" width="10" height="20"/>
-              <rect x="914" y="500" width="10" height="12"/>
-              <rect x="928" y="486" width="10" height="26"/>
-            </g>
-          </g>
 
-          <rect x="862" y="112" width="16" height="168" fill="#d6452b"/>
-          <circle cx="960" cy="520" r="58" fill="url(#cover-dots)" opacity=".7"/>
-
-          <g fill="#f1ede4">
-            <rect x="1180" y="512" width="3" height="30"/>
-            <rect x="1186" y="512" width="1" height="30"/>
-            <rect x="1190" y="512" width="5" height="30"/>
-            <rect x="1198" y="512" width="2" height="30"/>
-            <rect x="1203" y="512" width="7" height="30"/>
-            <rect x="1213" y="512" width="1" height="30"/>
-            <rect x="1217" y="512" width="4" height="30"/>
-            <rect x="1224" y="512" width="2" height="30"/>
-            <rect x="1229" y="512" width="6" height="30"/>
-            <rect x="1238" y="512" width="3" height="30"/>
-          </g>
-
-          <rect x="54" y="542" width="220" height="6" fill="url(#cover-hatch)"/>
-
-          <g transform="translate(1380 470) rotate(-90)" fill="#f1ede4" fill-opacity=".4" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.4">
-            <text x="0" y="0">ESTUDO DE CASO / DEMONSTRAÇÃO</text>
-          </g>
+            <rect x="54" y="500" width="220" height="6" fill="#d6452b" opacity=".8"/>
+            <text x="54" y="530" fill="#f1ede4" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.5">CONTROLE PESSOAL / ESTUDO DE CASO</text>
           </svg>
         </div>
         <figcaption>
-          <span>Fig. 01 — capa demonstrativa</span>
-          <span>Composição vetorial provisória</span>
+          <span>Fig. 01 — capa</span>
+          <span>Captura da Visão geral</span>
         </figcaption>
       </figure>
 
-      <section class="case-section" aria-labelledby="overview">
+      <section class="case-section" aria-labelledby="context">
         <div class="case-section__label">
           <span class="index">01</span>
-          <h2 id="overview">Visão geral</h2>
+          <h2 id="context">Contexto e problema</h2>
         </div>
         <div class="case-section__body">
-          <h2 class="case-section__title">Uma leitura clara antes de qualquer número.</h2>
+          <h2 class="case-section__title">Controle sério sem depender da nuvem.</h2>
           <div class="case-overview">
             <div class="prose">
-              <p><strong>Tally</strong> é uma aplicação pessoal de controle financeiro. Esta página existe como demonstração de estrutura editorial: um espaço para apresentar contexto, decisões, imagens e informações técnicas de um projeto.</p>
-              <p>O conteúdo definitivo — motivação, funcionalidades e resultados — será escrito a partir do material real. Nada aqui deve ser lido como descrição final do produto.</p>
-              <p class="prose__note">Texto provisório / página demonstrativa.</p>
+              <p><strong>Tally</strong> é um aplicativo desktop de finanças pessoais para Windows. Os dados ficam em um banco SQLite local; não há login, sincronização em nuvem, assinatura ou telemetria. A única requisição de rede é a taxa pública do CDI usada nos rendimentos dos cofrinhos.</p>
+              <p>O projeto parte de uma premissa de produto: controle financeiro pessoal exige o mesmo rigor de um banco para cartões e parcelamentos, com uma interface densa e legível. As regras financeiras ficam no núcleo em Rust; a interface apresenta o estado calculado, não inventa saldos.</p>
+              <p>A consequência visual é uma aplicação densa, mas legível: números com peso, tabelas alinhadas, estados explícitos e pouca decoração sem função.</p>
+              <p class="prose__note">Contexto reconstruído a partir do README e do ROADMAP do projeto. Sem pesquisa com usuários ou métricas de uso.</p>
             </div>
             <div class="pullquote">
-              <p>“Clareza antes de recurso.”</p>
-              <span class="mono">Direção de estudo / provisória</span>
+              <p>“Um instrumento de precisão financeira, local-first e offline.”</p>
+              <span class="mono">Direção do produto</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="case-section" aria-labelledby="visual-system">
+      <section class="case-section" aria-labelledby="principles">
         <div class="case-section__label">
           <span class="index">02</span>
-          <h2 id="visual-system">Sistema visual</h2>
+          <h2 id="principles">Princípios e arquitetura da informação</h2>
         </div>
         <div class="case-section__body">
-          <h2 class="case-section__title">Uma gramática visual para o projeto.</h2>
+          <h2 class="case-section__title">Uma ordem que separa operação de sistema.</h2>
+          <div class="prose">
+            <p>A navegação da v0.2.0 organiza o produto em dois grupos. A ordem é intencional: primeiro o que o usuário opera no dia a dia; depois o que configura o sistema.</p>
+          </div>
+          <dl class="specs mt-24">
+            <div class="specs__row">
+              <dt>Operação</dt>
+              <dd>Visão geral · Quadro de Análises · Movimentações · Contas e cartões · Parcelamentos</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Sistema</dt>
+              <dd>Categorias · Configurações</dd>
+            </div>
+          </dl>
+          <div class="prose mt-24">
+            <p>A <strong>Visão geral</strong> responde “onde estou agora”: patrimônio, contas, resumo do mês e últimos lançamentos. O <strong>Quadro de Análises</strong> responde “como isso evolui”: gráficos, comparativos e filtros temporais, com seletor de mês próprio.</p>
+            <p><strong>Movimentações</strong> é o livro; <strong>Contas e cartões</strong> reúne ativos e passivos; <strong>Parcelamentos</strong> é a fonte completa de compromissos e parcelas. A separação evita que a Visão geral acumule filtros e gráficos que pertencem à análise.</p>
+          </div>
+        </div>
+      </section>
 
+      <section class="case-section" aria-labelledby="identity">
+        <div class="case-section__label">
+          <span class="index">03</span>
+          <h2 id="identity">Identidade e linguagem visual</h2>
+        </div>
+        <div class="case-section__body">
+          <h2 class="case-section__title">Uma gramática visual para números e obrigações.</h2>
           <div class="case-gallery">
-            <figure class="plate plate--wide">
+            <figure class="plate plate--half plate--symbol">
               <div class="plate__canvas">
-                <svg viewBox="0 0 760 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-                  <defs>
-                    <pattern id="g1-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-                      <path d="M32 0H0V32" fill="none" stroke="#17160f" stroke-opacity=".06"/>
-                    </pattern>
-                  </defs>
-                  <rect width="760" height="500" fill="#e7e1d4"/>
-                  <rect width="760" height="500" fill="url(#g1-grid)"/>
-
-                  <g fill="#17160f" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="7.5" letter-spacing="1.1">
-                    <text x="28" y="30">INTERFACE / ESTUDO 01</text>
-                    <text x="732" y="30" text-anchor="end">WIREFRAME / PROVISÓRIO</text>
-                  </g>
-
-                  <rect x="58" y="62" width="644" height="382" fill="#f1ede4" stroke="#17160f" stroke-width="1.3"/>
-                  <rect x="58" y="62" width="644" height="26" fill="#17160f"/>
-                  <g fill="#f1ede4">
-                    <circle cx="74" cy="75" r="3" fill-opacity=".55"/>
-                    <circle cx="85" cy="75" r="3" fill-opacity=".3"/>
-                    <circle cx="96" cy="75" r="3" fill="#d6452b"/>
-                  </g>
-                  <text x="676" y="79" text-anchor="end" fill="#f1ede4" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">TALLY / VISÃO GERAL</text>
-
-                  <rect x="58" y="88" width="154" height="356" fill="#17160f"/>
-                  <text x="78" y="116" fill="#f1ede4" fill-opacity=".6" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">NAVEGAÇÃO</text>
-                  <g fill="#f1ede4">
-                    <rect x="78" y="136" width="86" height="5" fill-opacity=".65"/>
-                    <rect x="78" y="158" width="66" height="4" fill-opacity=".28"/>
-                    <rect x="78" y="176" width="74" height="4" fill-opacity=".28"/>
-                    <rect x="78" y="194" width="56" height="4" fill-opacity=".28"/>
-                  </g>
-                  <rect x="72" y="136" width="3" height="5" fill="#d6452b"/>
-                  <text x="78" y="412" fill="#f1ede4" fill-opacity=".3" font-family="'JetBrains Mono', monospace" font-size="6" letter-spacing="1">V 0.1 / ESTUDO</text>
-
-                  <g fill="#17160f" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">
-                    <text x="234" y="116">SALDO / VISÃO GERAL</text>
-                    <text x="234" y="204">ÚLTIMOS REGISTROS</text>
-                  </g>
-                  <text x="232" y="168" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="600" letter-spacing="-2">R$ —</text>
-                  <path d="M234 182h112" stroke="#d6452b" stroke-width="3"/>
-
-                  <g stroke="#17160f" stroke-opacity=".16">
-                    <path d="M234 228h438M234 258h438M234 288h438M234 318h438M234 348h438"/>
-                  </g>
-                  <g fill="#17160f">
-                    <rect x="234" y="236" width="32" height="12" fill-opacity=".1"/>
-                    <rect x="278" y="239" width="128" height="5" fill-opacity=".32"/>
-                    <rect x="596" y="238" width="76" height="7" fill-opacity=".14"/>
-                    <rect x="234" y="266" width="32" height="12" fill-opacity=".1"/>
-                    <rect x="278" y="269" width="94" height="5" fill-opacity=".32"/>
-                    <rect x="606" y="268" width="66" height="7" fill-opacity=".14"/>
-                    <rect x="234" y="296" width="32" height="12" fill-opacity=".1"/>
-                    <rect x="278" y="299" width="148" height="5" fill-opacity=".32"/>
-                    <rect x="612" y="298" width="60" height="7" fill-opacity=".14"/>
-                  </g>
-
-                  <g fill="#d6452b">
-                    <rect x="234" y="362" width="12" height="26"/>
-                    <rect x="252" y="354" width="12" height="34"/>
-                    <rect x="270" y="368" width="12" height="20"/>
-                    <rect x="288" y="346" width="12" height="42"/>
-                    <rect x="306" y="360" width="12" height="28"/>
-                  </g>
-                  <g fill="#17160f" fill-opacity=".14">
-                    <rect x="334" y="370" width="12" height="18"/>
-                    <rect x="352" y="362" width="12" height="26"/>
-                    <rect x="370" y="356" width="12" height="32"/>
-                  </g>
-
-                  <g stroke="#17160f" stroke-opacity=".45" stroke-width="1">
-                    <path d="M58 458v-8M702 458v-8M58 454h644"/>
-                    <path d="M58 446l-4 8 4 8M702 446l4 8-4 8"/>
-                  </g>
-                  <text x="28" y="480" fill="#17160f" fill-opacity=".45" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">FIG. 02 / COMPOSIÇÃO PROVISÓRIA</text>
-                </svg>
+                <img src="images/tally-symbol-mark.png" width="896" height="896" alt="Símbolo do Tally para fundo claro: três barras verticais em oliva escuro, uma barra terracota e uma linha horizontal terracota." loading="lazy" decoding="async">
               </div>
               <figcaption>
-                <span>Fig. 02 — estudo de interface</span>
-                <span>Wireframe / 760 × 500</span>
+                <span>Fig. 02 — símbolo para fundo claro</span>
+                <span>Versão derivada do símbolo oficial</span>
+              </figcaption>
+            </figure>
+            <div class="case-gallery__note">
+              <span class="mono">Identidade / notas</span>
+              <p>Papel quente, tinta, oliva e terracota; IBM Plex Sans e IBM Plex Mono; temas claro, escuro e sistema.</p>
+              <span class="link-arrow">
+                <span>Identidade do produto, não do site</span>
+              </span>
+            </div>
+          </div>
+          <div class="prose mt-24">
+            <p>A identidade do Tally foi construída para um software financeiro sério: tipografia forte, números protagonistas, tabelas densas, alinhamento rigoroso e divisórias sutis. A base registrada é IBM Plex Sans e IBM Plex Mono, papel quente, tinta, oliva e terracota, com temas claro, escuro e sistema.</p>
+            <p>A família terracota/oxide aparece na marca, em ações e também em estados semânticos da interface, como alertas, negativos e destaques. Não é uma cor exclusiva de marca ou de ação.</p>
+            <p>O site do portfólio mantém sua própria identidade editorial. A identidade do Tally aparece nas mídias e no símbolo, sem recolocar a paleta ou a tipografia do produto no chrome do site.</p>
+          </div>
+          <dl class="specs mt-24">
+            <div class="specs__row">
+              <dt>Símbolo</dt>
+              <dd>tally.png; versão para fundo claro em tally-symbol-mark.png</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Tipografia</dt>
+              <dd>IBM Plex Sans / IBM Plex Mono</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Paleta</dt>
+              <dd>Papel quente, tinta, oliva e terracota</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Temas</dt>
+              <dd>Claro, escuro e sistema</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="interface">
+        <div class="case-section__label">
+          <span class="index">04</span>
+          <h2 id="interface">A interface</h2>
+        </div>
+        <div class="case-section__body">
+          <h2 class="case-section__title">Números protagonistas, densidade controlada.</h2>
+          <div class="prose">
+            <p>A hierarquia da interface coloca os números que importam no topo e mantém a leitura densa sem esconder contexto. Valores monetários usam numerais tabulares e alinhamento à direita; tabelas usam divisórias sutis; estados de carregamento, erro e vazio são explícitos.</p>
+            <p>A cor tem função semântica: receita e despesa têm cores próprias; transferências permanecem neutras; a terracota aparece em marca, ações e estados de atenção. O resultado é uma interface de produto financeiro, não um dashboard genérico.</p>
+          </div>
+          <div class="case-gallery mt-24">
+            <figure class="plate plate--wide plate--capture">
+              <div class="plate__canvas">
+                <img src="images/analysis.png" width="1280" height="820" alt="Captura do Quadro de Análises do Tally em tema escuro: gastos por categoria, receitas, fluxo de caixa e tabela por categoria e tipo." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>Fig. 03 — Quadro de Análises</span>
+                <span>Captura do aplicativo / tema escuro</span>
               </figcaption>
             </figure>
 
-            <figure class="plate plate--narrow">
+            <figure class="plate plate--half plate--capture">
               <div class="plate__canvas">
-                <svg viewBox="0 0 520 610" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-                  <defs>
-                    <pattern id="g2-grid" width="36" height="36" patternUnits="userSpaceOnUse">
-                      <path d="M36 0H0V36" fill="none" stroke="#f1ede4" stroke-opacity=".17"/>
-                    </pattern>
-                  </defs>
-                  <rect width="520" height="610" fill="#d6452b"/>
-                  <rect width="520" height="610" fill="url(#g2-grid)"/>
-
-                  <g fill="#f1ede4" fill-opacity=".72" font-family="'JetBrains Mono', monospace" font-size="7.5" letter-spacing="1.1">
-                    <text x="24" y="30">TIPOGRAFIA / ESTUDO</text>
-                    <text x="496" y="30" text-anchor="end">ESCALA / 01</text>
-                    <text x="24" y="582">TALLY — MARCA E SISTEMA</text>
-                    <text x="496" y="582" text-anchor="end">2026</text>
-                  </g>
-
-                  <text x="26" y="390" fill="#f1ede4" font-family="'Bricolage Grotesque', sans-serif" font-size="330" font-weight="700" font-stretch="82%" letter-spacing="-22">T</text>
-                  <text x="300" y="390" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="112" font-weight="500" letter-spacing="-6">01</text>
-
-                  <circle cx="382" cy="470" r="64" fill="#17160f"/>
-                  <text x="382" y="480" text-anchor="middle" fill="#f1ede4" font-family="'Bricolage Grotesque', sans-serif" font-size="30" font-weight="600" letter-spacing="-1">R$</text>
-
-                  <g fill="none" stroke="#f1ede4" stroke-opacity=".55">
-                    <circle cx="84" cy="470" r="42"/>
-                    <circle cx="84" cy="470" r="18"/>
-                    <path d="M84 420v100M34 470h100"/>
-                  </g>
-
-                  <g transform="translate(494 360) rotate(-90)" fill="#17160f" fill-opacity=".6" font-family="'JetBrains Mono', monospace" font-size="7" letter-spacing="1.4">
-                    <text x="0" y="0">CONTROLE FINANCEIRO PESSOAL</text>
-                  </g>
-
-                  <g stroke="#17160f" stroke-opacity=".5" stroke-width="1">
-                    <path d="M14 46h10M19 41v10"/>
-                    <path d="M496 46h10M501 41v10"/>
-                    <path d="M14 554h10M19 549v10"/>
-                    <path d="M496 554h10M501 549v10"/>
-                  </g>
-
-                  <g fill="#17160f">
-                    <rect x="24" y="524" width="16" height="16"/>
-                    <rect x="44" y="524" width="16" height="16" fill-opacity=".55"/>
-                    <rect x="64" y="524" width="16" height="16" fill-opacity=".25"/>
-                  </g>
-                </svg>
+                <img src="images/movements.png" width="1280" height="820" alt="Captura de Movimentações do Tally em tema escuro: filtros e dois lançamentos com data, conta, categoria e valor." loading="lazy" decoding="async">
               </div>
               <figcaption>
-                <span>Fig. 03 — estudo tipográfico</span>
-                <span>Marca / vermelho-sinal</span>
+                <span>Fig. 04 — Movimentações</span>
+                <span>Captura do aplicativo / tema escuro</span>
+              </figcaption>
+            </figure>
+
+            <figure class="plate plate--half plate--capture">
+              <div class="plate__canvas">
+                <img src="images/accounts.png" width="1280" height="820" alt="Captura de Contas e cartões do Tally em tema escuro: patrimônio, cofrinhos, cartão de crédito e contas cadastradas." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>Fig. 05 — Contas e cartões</span>
+                <span>Captura do aplicativo / tema escuro</span>
+              </figcaption>
+            </figure>
+
+            <figure class="plate plate--wide plate--capture">
+              <div class="plate__canvas">
+                <img src="images/installments.png" width="1280" height="820" alt="Captura de Parcelamentos do Tally em tema escuro, em estado vazio: nenhuma compra parcelada registrada e totais zerados." loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>Fig. 06 — Parcelamentos</span>
+                <span>Captura do aplicativo / estado vazio</span>
               </figcaption>
             </figure>
 
             <figure class="plate plate--half">
               <div class="plate__canvas">
                 <svg viewBox="0 0 640 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-                  <defs>
-                    <pattern id="g3-grid" width="28" height="28" patternUnits="userSpaceOnUse">
-                      <path d="M28 0H0V28" fill="none" stroke="#17160f" stroke-opacity=".06"/>
-                    </pattern>
-                  </defs>
-                  <rect width="640" height="440" fill="#f1ede4"/>
-                  <rect width="640" height="440" fill="url(#g3-grid)"/>
-
-                  <g fill="#17160f" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="7.5" letter-spacing="1.1">
-                    <text x="24" y="30">FLUXO / ESTUDO 03</text>
-                    <text x="616" y="30" text-anchor="end">ARQUITETURA</text>
-                  </g>
-
-                  <g stroke="#17160f" stroke-width="1.2" fill="none">
-                    <path d="M158 150h58M302 112v-24h128v38M302 188v24h128v-38M450 160h38"/>
-                    <path d="M168 320h-38v-78h-24"/>
-                    <path d="M302 300v-20h128v-58"/>
-                  </g>
-                  <g fill="#d6452b">
-                    <circle cx="216" cy="150" r="3.5"/>
-                    <circle cx="430" cy="112" r="3.5"/>
-                    <circle cx="430" cy="188" r="3.5"/>
-                    <circle cx="106" cy="242" r="3.5"/>
-                    <circle cx="430" cy="242" r="3.5"/>
-                  </g>
-
-                  <g>
-                    <rect x="36" y="116" width="122" height="68" fill="#f1ede4" stroke="#17160f" stroke-width="1.2"/>
-                    <text x="48" y="134" fill="#17160f" fill-opacity=".5" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">01 / ENTRADA</text>
-                    <text x="48" y="162" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="18" font-weight="600">Registro</text>
-
-                    <rect x="220" y="76" width="148" height="72" fill="#17160f"/>
-                    <text x="234" y="96" fill="#f1ede4" fill-opacity=".5" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">02 / LEITURA</text>
-                    <text x="234" y="126" fill="#f1ede4" font-family="'Bricolage Grotesque', sans-serif" font-size="20" font-weight="600">Categorias</text>
-
-                    <rect x="220" y="252" width="148" height="72" fill="#f1ede4" stroke="#d6452b" stroke-width="1.4"/>
-                    <text x="234" y="272" fill="#d6452b" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">03 / TRATAMENTO</text>
-                    <text x="234" y="302" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="20" font-weight="600">Totais</text>
-
-                    <rect x="450" y="116" width="152" height="68" fill="#f1ede4" stroke="#17160f" stroke-width="1.2"/>
-                    <text x="464" y="134" fill="#17160f" fill-opacity=".5" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">04 / SAÍDA</text>
-                    <text x="464" y="162" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="18" font-weight="600">Visão geral</text>
-
-                    <rect x="450" y="252" width="152" height="68" fill="#e7e1d4" stroke="#17160f" stroke-width="1.2"/>
-                    <text x="464" y="270" fill="#17160f" fill-opacity=".5" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">05 / ESTADO</text>
-                    <text x="464" y="298" fill="#17160f" font-family="'Bricolage Grotesque', sans-serif" font-size="18" font-weight="600">Histórico</text>
-                  </g>
-
-                  <g stroke="#17160f" stroke-opacity=".45">
-                    <path d="M36 386h568"/>
-                    <path d="M36 380v12M604 380v12"/>
-                  </g>
-                  <text x="24" y="416" fill="#17160f" fill-opacity=".45" font-family="'JetBrains Mono', monospace" font-size="6.5" letter-spacing="1">DIAGRAMA PROVISÓRIO / NÃO REPRESENTA A ARQUITETURA FINAL</text>
+                  <rect width="640" height="440" fill="#e9e3d6"/>
+                  <path d="M0 0 640 440M640 0 0 440" stroke="#17160f" stroke-opacity=".08"/>
+                  <rect x=".5" y=".5" width="639" height="439" fill="none" stroke="#17160f" stroke-opacity=".22"/>
+                  <text x="320" y="202" text-anchor="middle" fill="#17160f" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="2">GIF FUTURO</text>
+                  <text x="320" y="230" text-anchor="middle" fill="#17160f" fill-opacity=".4" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.6">FORMULÁRIO ÚNICO</text>
+                  <text x="320" y="252" text-anchor="middle" fill="#b5331c" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.4">MÍDIA A PRODUZIR</text>
                 </svg>
               </div>
               <figcaption>
-                <span>Fig. 04 — diagrama de fluxo</span>
-                <span>Estudo / 640 × 440</span>
+                <span>Fig. 07 — interação</span>
+                <span>GIF futuro / formulário único</span>
+              </figcaption>
+            </figure>
+
+            <figure class="plate plate--half">
+              <div class="plate__canvas">
+                <svg viewBox="0 0 640 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                  <rect width="640" height="440" fill="#e9e3d6"/>
+                  <path d="M0 0 640 440M640 0 0 440" stroke="#17160f" stroke-opacity=".08"/>
+                  <rect x=".5" y=".5" width="639" height="439" fill="none" stroke="#17160f" stroke-opacity=".22"/>
+                  <text x="320" y="202" text-anchor="middle" fill="#17160f" fill-opacity=".55" font-family="'JetBrains Mono', monospace" font-size="14" letter-spacing="2">GIF FUTURO</text>
+                  <text x="320" y="230" text-anchor="middle" fill="#17160f" fill-opacity=".4" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.6">PAGAMENTO E FIFO</text>
+                  <text x="320" y="252" text-anchor="middle" fill="#b5331c" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.4">MÍDIA A PRODUZIR</text>
+                </svg>
+              </div>
+              <figcaption>
+                <span>Fig. 08 — pagamento</span>
+                <span>GIF futuro / alocação FIFO</span>
               </figcaption>
             </figure>
 
             <div class="case-gallery__note">
-              <span class="mono">Fig. 02 — 04 / notas</span>
-              <p>As placas acima são composições de estudo. Nenhuma interface real do produto é mostrada nesta versão.</p>
+              <span class="mono">Mídias provisórias</span>
+              <p>As capturas são do aplicativo e serão substituídas por versões com dados fictícios e valores ocultados. Os dois GIFs de interação continuam como placeholders.</p>
               <span class="link-arrow">
-                <span>Composição vetorial provisória</span>
+                <span>Capturas em tema escuro</span>
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="case-section" aria-labelledby="process">
+      <section class="case-section" aria-labelledby="decisions">
         <div class="case-section__label">
-          <span class="index">03</span>
-          <h2 id="process">Processo</h2>
+          <span class="index">05</span>
+          <h2 id="decisions">Decisões de produto</h2>
         </div>
         <div class="case-section__body">
-          <h2 class="case-section__title">Do contexto à implementação.</h2>
-          <div class="process">
-            <div class="process__step">
-              <span class="index">01</span>
-              <h3>Contexto</h3>
-              <p>Problema, objetivos e restrições do projeto.</p>
+          <h2 class="case-section__title">Decisões que sustentam a interface.</h2>
+          <div class="prose--columns">
+            <div class="prose">
+              <p><strong>Um único fluxo de entrada.</strong> Despesa, receita, transferência, compra no cartão, pagamento e ajuste partem do mesmo formulário adaptativo. O tipo muda os campos e as validações, não a lógica de navegação.</p>
+              <p><strong>Compra parcelada não é despesa mensal.</strong> O total da compra aumenta a dívida do cartão; a despesa é reconhecida parcela a parcela. A conta interna “Despesa a reconhecer” mantém o patrimônio correto e evita dupla contagem.</p>
             </div>
-            <div class="process__step">
-              <span class="index">02</span>
-              <h3>Estrutura</h3>
-              <p>Fluxos, conteúdo e organização da informação.</p>
-            </div>
-            <div class="process__step">
-              <span class="index">03</span>
-              <h3>Interface</h3>
-              <p>Hierarquia, tipografia, cor e interação.</p>
-            </div>
-            <div class="process__step">
-              <span class="index">04</span>
-              <h3>Implementação</h3>
-              <p>Código, testes e refinamento do resultado.</p>
+            <div class="prose">
+              <p><strong>Visão geral e Quadro de Análises têm papéis distintos.</strong> A Visão geral mostra a posição atual, sem seletor global de mês. O Quadro concentra gráficos, comparativos e filtros temporais.</p>
+              <p><strong>Confirmação, backup e reversibilidade.</strong> Ações destrutivas pedem confirmação com consequência explícita; o app cria backups antes de migrações e permite backup e restauração local. O frontend não assume sucesso antes da resposta do núcleo.</p>
             </div>
           </div>
-          <p class="prose__note">Etapas genéricas para demonstração. Não descrevem um processo executado nem resultados obtidos.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="evolution">
+        <div class="case-section__label">
+          <span class="index">06</span>
+          <h2 id="evolution">Evolução do produto</h2>
+        </div>
+        <div class="case-section__body">
+          <h2 class="case-section__title">Evolução contínua, registrada no repositório.</h2>
+          <div class="prose">
+            <p>Este estudo apresenta o Tally em seu estado atual. As decisões, melhorias e mudanças realizadas ao longo do projeto podem ser acompanhadas pelo histórico do repositório, commit a commit.</p>
+            <p>O <a href="https://github.com/thomasteinhoff/tally/commits/main" target="_blank" rel="noopener noreferrer">histórico de commits</a> mostra a evolução do código e da interface. As <a href="https://github.com/thomasteinhoff/tally/releases" target="_blank" rel="noopener noreferrer">releases</a> reúnem as versões publicadas e suas respectivas notas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="technical">
+        <div class="case-section__label">
+          <span class="index">07</span>
+          <h2 id="technical">Dimensão técnica</h2>
+        </div>
+        <div class="case-section__body">
+          <h2 class="case-section__title">A interface é a ponta de um sistema consistente.</h2>
+          <div class="prose">
+            <p>O Tally usa Rust para regras financeiras e persistência, Tauri 2 como shell desktop, Svelte 5 e TypeScript na interface e SQLite local. Uma mutação é uma transação; relatórios leem apenas lançamentos publicados. A interface não calcula saldos por conta própria.</p>
+            <p>A distribuição é um instalador NSIS para Windows 10/11, com WebView2 offline. O usuário final não precisa instalar Node, Rust ou SQLite. Os dados permanecem no computador e podem ser preservados por backup local.</p>
+          </div>
+          <dl class="specs mt-24">
+            <div class="specs__row">
+              <dt>Stack</dt>
+              <dd>Rust · Tauri 2 · Svelte 5 · TypeScript · SQLite</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Arquitetura</dt>
+              <dd>Tally.exe → Tauri → Svelte/TypeScript → comandos → Rust → SQLite</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Dados</dt>
+              <dd>SQLite local em %LOCALAPPDATA%\Tally\</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Distribuição</dt>
+              <dd>Instalador NSIS / Windows 10/11</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Privacidade</dt>
+              <dd>Sem login, nuvem, sincronização ou telemetria. A única rede é a consulta pública do CDI.</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section class="case-section" aria-labelledby="specs">
         <div class="case-section__label">
-          <span class="index">04</span>
+          <span class="index">08</span>
           <h2 id="specs">Ficha técnica</h2>
         </div>
         <div class="case-section__body">
@@ -508,34 +432,41 @@
           <dl class="specs">
             <div class="specs__row">
               <dt>Projeto</dt>
-              <dd>Tally — aplicação pessoal de controle financeiro</dd>
+              <dd>Tally — controle financeiro pessoal</dd>
             </div>
             <div class="specs__row">
               <dt>Tipo</dt>
-              <dd>Aplicação pessoal / produto digital</dd>
+              <dd>Aplicativo desktop / produto digital</dd>
             </div>
             <div class="specs__row">
-              <dt>Ano</dt>
-              <dd>20—</dd>
+              <dt>Ano / status</dt>
+              <dd>2026 / v0.2.0 publicada</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Papel</dt>
+              <dd>Design de produto, UI e desenvolvimento</dd>
             </div>
             <div class="specs__row">
               <dt>Escopo</dt>
-              <dd>Em definição</dd>
+              <dd>Produto, arquitetura da informação, interface e implementação</dd>
             </div>
             <div class="specs__row">
               <dt>Interface</dt>
-              <dd>HTML, CSS e JavaScript puro (protótipo)</dd>
+              <dd>Svelte 5 + TypeScript; temas claro, escuro e sistema</dd>
             </div>
             <div class="specs__row">
-              <dt>Conteúdo</dt>
-              <dd>Provisório — textos, imagens e dados a revisar</dd>
+              <dt>Distribuição</dt>
+              <dd>Instalador Windows (NSIS)</dd>
             </div>
             <div class="specs__row">
-              <dt>Status</dt>
-              <dd>Demonstração de estrutura editorial</dd>
+              <dt>Dados</dt>
+              <dd>SQLite local; sem login ou nuvem</dd>
+            </div>
+            <div class="specs__row">
+              <dt>Idioma do produto</dt>
+              <dd>Português brasileiro</dd>
             </div>
           </dl>
-          <p class="prose__note">Ficha ilustrativa. Dados definitivos serão preenchidos após a seleção e revisão do conteúdo real do projeto.</p>
 
           <div class="button-row mt-24">
             <a class="button" href="../../contact.html">Falar sobre um projeto
@@ -552,7 +483,7 @@
         <a class="case-nav__item" href="../index.html">
           <span class="mono">← Voltar ao índice</span>
           <strong>Arquivo de projetos</strong>
-          <span>Demais projetos em preparação</span>
+          <span>Estudo de caso publicado</span>
         </a>
         <div class="case-nav__item case-nav__item--muted">
           <span class="mono">Próximo estudo →</span>

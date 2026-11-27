@@ -4,11 +4,11 @@ Protótipo visual de portfólio pessoal para design gráfico, ilustração, inte
 
 A página inicial funciona como uma **prancha editorial modular**: uma grade assimétrica de cards com proporções variadas, tipografia expressiva, placas vetoriais provisórias e micro-informações técnicas. O projeto é intencionalmente estático, sem frameworks, bibliotecas de componentes, bundlers ou backend.
 
-> **Estado do conteúdo:** nomes, textos, imagens, anos, e-mail e links são provisórios. Nenhum cliente, resultado ou experiência profissional foi inventado. Os pontos que precisam de substituição estão indicados no site e neste README.
+> **Estado do conteúdo:** o estudo do Tally é real e baseado no histórico do projeto. Nome, e-mail, links institucionais, demais projetos e mídias visuais continuam provisórios. Nenhum cliente, resultado ou experiência profissional foi inventado. Os pontos que precisam de substituição estão indicados no site e neste README.
 
 ## Planejamento
 
-A **Fase 0 — consolidação do planejamento** está concluída. A **Fase 1 — fundação bilíngue do shell** foi implementada para as páginas institucionais, com uma pendência editorial: o currículo PT/EN continua em rascunho até a fonte `.tex` ser localizada e conferida. A **Fase 2 — estrutura de projetos** foi implementada: o Tally migrou para `pages/projects/tally/`, tem par PT/EN, e os componentes aceitam imagens nos slots existentes. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
+A **Fase 0 — consolidação do planejamento** está concluída. A **Fase 1 — fundação bilíngue do shell** foi implementada para as páginas institucionais, com uma pendência editorial: o currículo PT/EN continua em rascunho até a fonte `.tex` ser localizada e conferida. A **Fase 2 — estrutura de projetos** foi implementada: o Tally migrou para `pages/projects/tally/`, tem par PT/EN, e os componentes aceitam imagens nos slots existentes. A **Fase 7** teve início com o estudo de caso real do Tally, publicado com mídias provisórias até as capturas sanitizadas serem produzidas. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
 
 Este README descreve o estado real do protótipo v0.1. A estrutura-alvo, as fases e o fluxo detalhado de trabalho não são duplicados aqui.
 
@@ -48,9 +48,11 @@ portfolio/
 │       │   ├── software.html
 │       │   └── software.en.html
 │       └── tally/
-│           ├── index.html             # projeto PT
-│           ├── index.en.html          # projeto EN
-│           └── images/                # imagens compartilhadas (.gitkeep)
+│           ├── index.html             # estudo de caso PT
+│           ├── index.en.html          # estudo de caso EN
+│           ├── project.css            # ajustes escopados de galeria e captura
+│           ├── ASSETS.md              # inventário de mídias e placeholders
+│           └── images/                # símbolo oficial, versão para fundo claro e capturas provisórias
 ├── assets/
 │   ├── css/
 │   │   ├── fonts.css        # fontes WOFF2 embutidas em base64 (funciona via file://)
@@ -66,11 +68,13 @@ portfolio/
 │   │   └── OFL-JetBrainsMono.txt
 │   ├── icons/
 │   │   └── favicon.svg
-│   └── images/              # reservada para imagens reais futuras
+│   └── images/              # imagens compartilhadas pelo site
 ├── .gitignore
 ├── ROADMAP.md               # planejamento, fases e fluxo de trabalho
 └── README.md
 ```
+
+Imagens compartilhadas pelo site ficam em `assets/images/`; imagens específicas de um estudo de caso ficam em `pages/projects/<slug>/images/` e são referenciadas com caminhos relativos.
 
 ## Idiomas
 
@@ -113,11 +117,26 @@ Depois acesse `http://localhost:8000`.
 Os slots visuais existentes aceitam `<img>` no lugar do `<svg>` inline, sem alterar a grade, a proporção ou o desenho dos cards e placas:
 
 - `.card__art` (cards da home e de projetos) — `object-fit: cover`.
-- `.plate__canvas` (galerias do estudo de caso) — `object-fit: cover`.
+- `.plate__canvas` (galerias do estudo de caso) — `object-fit: cover`; placas com captura usam `.plate--capture` e `object-fit: contain`.
 - `.case__cover-canvas` (capa do projeto) — `object-fit: contain`.
 - `.visual-plate__canvas` (placa do hero) — `object-fit: contain`.
 
-Ao substituir um SVG, mantenha o elemento dentro do mesmo slot e informe `width`, `height`, `alt` traduzido, `loading="lazy"` para imagens abaixo da dobra e `decoding="async"` quando aplicável. Imagens sem texto são compartilhadas entre PT e EN na pasta `images/` do projeto; imagens com texto exigem variantes por idioma. Nenhuma imagem real foi adicionada nesta fase: `assets/images/` e `pages/projects/tally/images/` contêm apenas `.gitkeep`.
+Ao substituir um SVG, mantenha o elemento dentro do mesmo slot e informe `width`, `height`, `alt` traduzido, `loading="lazy"` para imagens abaixo da dobra e `decoding="async"` quando aplicável. Imagens sem texto são compartilhadas entre PT e EN na pasta `images/` do projeto; imagens com texto exigem variantes por idioma.
+
+O estudo do Tally usa [`pages/projects/tally/ASSETS.md`](pages/projects/tally/ASSETS.md) como inventário das mídias. Os arquivos de imagem versionados são o símbolo oficial `tally-symbol.png`, copiado de `tally.png` no repositório do Tally, a versão `tally-symbol-mark.png`, derivada para fundo claro, e as cinco capturas provisórias em tema escuro (`overview`, `analysis`, `movements`, `accounts` e `installments`). O `ASSETS.md` registra nomes, textos alternativos PT/EN e a regra de privacidade. As capturas ainda não estão sanitizadas e devem ser substituídas por versões com dados fictícios.
+
+## Estudo de caso do Tally
+
+`pages/projects/tally/index.html` e `index.en.html` formam o primeiro estudo de caso real do portfólio: contexto, arquitetura da informação, identidade, interface, decisões de produto, evolução e uma dimensão técnica complementar. As duas versões têm as mesmas seções e IDs.
+
+- Produto: Tally, aplicativo desktop local-first para Windows.
+- Ano / status: 2026 / v0.2.0 publicada.
+- Papel: design de produto, UI e desenvolvimento.
+- Idioma da interface: português brasileiro; legendas e `alt` são traduzidos.
+- Mídias: cinco capturas provisórias em tema escuro e dois GIFs ainda como placeholders; as capturas serão substituídas por versões com dados fictícios.
+- CSS específico: `project.css` apenas para `object-fit: contain` nas capturas e empilhamento da galeria no mobile.
+
+O estudo não inclui pesquisa com usuários, métricas, resultados financeiros ou clientes.
 
 ## Arquivo de projetos
 
@@ -174,14 +193,14 @@ Substitua os placeholders em todas as páginas:
 3. **Anos:** busque por `20—` nos cards, currículo e ficha técnica.
 4. **Links externos:** a página de contato aponta para o GitHub informado no briefing e marca os demais canais como “em preparação”.
 5. **Textos provisórios:** revise as notas com `Provisório`, `Provisional`, `Em preparação`, `In preparation` e `a confirmar` / `to be confirmed`.
-6. **Imagens:** as composições atuais continuam em SVG/CSS. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/` ou em `pages/projects/<slug>/images/`; a produção desses materiais depende do PC de casa.
+6. **Imagens:** as composições do site continuam em SVG/CSS. As cinco capturas do Tally já estão em `pages/projects/tally/images/`, em versão provisória, e devem ser refeitas com dados fictícios. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/` ou em `pages/projects/<slug>/images/`.
 7. **Currículo:** conferir o conteúdo contra o arquivo `.tex` existente antes de publicar. Não inventar experiências, datas ou formação.
 
 ## Adicionar um novo projeto
 
 O fluxo completo está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): modelos internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
 
-A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. A F4 criou os seis modelos editoriais internos, sem páginas públicas de demonstração e sem CSS novo. O mosaico da home segue manual, em `index.html`/`components.css`.
+A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. A F4 criou os seis modelos editoriais internos, sem páginas públicas de demonstração e sem CSS novo. A F7 publicou o estudo de caso do Tally nos dois idiomas, com capturas provisórias e inventário em `ASSETS.md`; a conclusão da fase depende das capturas sanitizadas. O mosaico da home segue manual, em `index.html`/`components.css`.
 
 ## Desenvolvimento em dois computadores
 
@@ -224,9 +243,10 @@ O push é feito manualmente ao final de cada fase concluída. A ativação do Gi
 - Conteúdo, imagem de retrato, e-mail e links são provisórios.
 - Não há formulário de contato funcional, CMS, banco de dados ou integração externa.
 - A versão em inglês cobre páginas institucionais, Tally, arquivo de projetos e os seis modelos internos.
-- Apenas Tally possui página interna demonstrativa; no arquivo, os demais projetos são entradas reais sem página individual, identificadas como “em preparação”.
+- Apenas o Tally possui página interna, agora um estudo de caso real com capturas provisórias; no arquivo, os demais projetos são entradas reais sem página individual, identificadas como “em preparação”.
+- As capturas do Tally ainda não foram produzidas em versão sanitizada; as atuais mostram o aplicativo real e serão substituídas. Os dois GIFs de interação continuam como placeholders.
 - Os modelos da F4 são internos e estão fora da navegação e do índice: não há páginas públicas de demonstração para Branding, Ilustração ou Software.
 - Os modelos usam placeholders e SVGs neutros. Nenhum conteúdo de projeto foi inventado, e nenhum CSS específico por categoria foi criado na F4.
 - O mosaico de projetos usa posições explícitas de grade. Novos cards exigem ajuste manual da composição em desktop e tablet.
 - O PDF do currículo ainda não existe; o botão está visualmente desativado. O par PT/EN atual é um rascunho e deve ser conciliado com o `.tex` existente.
-- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 foram concluídas, sem imagens reais e com o arquivo de projetos já publicado.
+- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 foram concluídas. A Fase 7 está em andamento: estudo do Tally publicado com mídias provisórias e capturas sanitizadas pendentes.
