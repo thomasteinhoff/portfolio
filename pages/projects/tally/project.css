@@ -1,0 +1,30 @@
+/* Tally case study — scoped layout adjustments.
+   The identity mark sits on paper without the dark app-icon tile,
+   and the shared gallery needs to stack on narrow viewports. */
+
+.plate--symbol .plate__canvas {
+  aspect-ratio: 1 / 1;
+  background: var(--paper);
+}
+
+.plate--symbol .plate__canvas > img {
+  object-fit: contain;
+}
+
+/* Captures are 1280 × 820. The canvas follows that ratio instead of
+   cropping the interface inside the wide and half slots. */
+.plate--capture .plate__canvas {
+  aspect-ratio: 1280 / 820;
+  background: #17160f;
+}
+
+.plate--capture .plate__canvas > img {
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .case-gallery .plate,
+  .case-gallery .case-gallery__note {
+    grid-column: 1 / -1;
+  }
+}
