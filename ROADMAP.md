@@ -1,12 +1,12 @@
 # Portfólio — Roadmap de arquitetura e conteúdo
 
-> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fases 2 e 3 concluídas; Fase 4 concluída; Fase 7 em andamento (estudo do Tally publicado com mídias provisórias).
+> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fases 2 e 3 concluídas; Fase 4 concluída; Fase 5 em andamento (Motoclube PT em revisão); Fase 7 em andamento (estudo do Tally publicado com mídias provisórias).
 >
 > **Baseline do protótipo:** `5b39f07 — Initial portfolio prototype — v0.1`
 >
 > **Branch:** `main`
 >
-> **Próxima fase:** F5 — piloto de Branding; F7 depende das capturas sanitizadas do Tally.
+> **Fases em andamento:** F5 — piloto de Branding; F7 — capturas sanitizadas do Tally pendentes.
 >
 > **Escopo deste documento:** decisões de arquitetura, internacionalização, conteúdo, estrutura de arquivos, ambientes de trabalho e entregas futuras. A implementação da F5 em diante não faz parte desta etapa.
 
@@ -611,7 +611,7 @@ As etiquetas não substituem as dependências entre fases. Elas apenas indicam o
 | **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura e código remotos concluídos; capturas ou assets visuais do Tally seguem pendentes em casa. |
 | **F3** | Concluída | `[REMOTO]` | Arquivo, navegação e links concluídos no repositório. |
 | **F4** | Concluída | `[REMOTO]` | Seis modelos PT/EN internos concluídos; sem CSS novo e sem páginas públicas. |
-| **F5** | Não iniciada | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. |
+| **F5** | Em andamento | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. Etapa 1 concluída; Etapa 2 (Motoclube PT) em revisão. |
 | **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Ilustração depende de materiais originais; HTML/CSS no repo. |
 | **F7** | Em andamento | `[REMOTO]` + `[CASA]` | Estudo do Tally em PT/EN publicado; capturas sanitizadas e revisão final pendentes. |
 | **F8** | Não iniciada | `[QUALQUER]` + `[REMOTO]` + `[CASA]` | Curadoria e textos em qualquer lugar; implementação remota; imagens finais em casa. |
@@ -698,7 +698,7 @@ Os rótulos visíveis continuam em português ou inglês, conforme a página. Co
 
 ## 12. Roadmap de implementação
 
-Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 estão concluídas; a Fase 7 está em andamento. Nenhuma fase deve introduzir build, backend ou dependências.
+Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 estão concluídas; as Fases 5 e 7 estão em andamento. Nenhuma fase deve introduzir build, backend ou dependências.
 
 | Fase | Status | Etiquetas | Objetivo | Entregáveis | Critério de conclusão |
 |---|---|---|---|---|---|
@@ -707,7 +707,7 @@ Cada fase representa uma entrega verificável. A Fase 0 está concluída; a Fase
 | **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura de projetos | Tally migrado para `pages/projects/tally/`; `index.html` e `index.en.html`; suporte a imagens nos cards/placas; links da home e do currículo atualizados; proteção contra tradução automática. | Tally abre nos dois idiomas, com o mesmo visual e sem overflow. |
 | **F3** | Concluída | `[REMOTO]` | Arquivo de projetos | `pages/projects/index.html` e `index.en.html`; nav, rodapé, breadcrumbs e home atualizados; entradas reais sem página com status explícito; CSS escopado de arquivo. | Arquivo lista o inventário aprovado, agrupado por categoria; links funcionam e não apontam para páginas inexistentes. |
 | **F4** | Concluída | `[REMOTO]` | Modelos editoriais internos | Criar seis arquivos em `pages/projects/_templates/`: `branding`, `illustration` e `software`, cada um em `.html` e `.en.html`; documentar caminhos relativos e adaptações na cópia; sem CSS novo, sem páginas públicas e sem alterações em Tally, home, arquivo, páginas institucionais ou `main.js`. | Modelos abrem via `file://` e HTTP local, usam `noindex, nofollow`, têm pares PT/EN equivalentes, não recebem links públicos e servem de base para cópia. |
-| **F5** | Não iniciada | `[CASA]` + `[REMOTO]` | Piloto de Branding | Primeiro projeto real de branding PT/EN; CSS de categoria/projeto apenas se necessário. | Projeto completo, responsivo, com ficha e aplicações. |
+| **F5** | Em andamento | `[CASA]` + `[REMOTO]` | Piloto de Branding | Primeiro projeto real de branding PT/EN; CSS de categoria/projeto apenas se necessário. | Projeto completo, responsivo, com ficha e aplicações. |
 | **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Piloto de Ilustração | Primeiros projetos reais da categoria; ajustes de galeria e mídia. | Os modelos visuais de Branding e Ilustração mantêm base comum sem parecer o mesmo template. |
 | **F7** | Em andamento | `[REMOTO]` + `[CASA]` | Software e conteúdo real | Estudo do Tally em PT/EN: contexto, arquitetura da informação, identidade, interface, decisões, evolução e dimensão técnica; `project.css` escopado; `ASSETS.md`. | Página com capturas sanitizadas no lugar das provisórias e conteúdo revisado nos dois idiomas. |
 | **F8** | Não iniciada | `[QUALQUER]` + `[REMOTO]` + `[CASA]` | Curadoria e conteúdo completo | Home com seleção final; arquivo completo; currículo fiel ao `.tex` e com seleção; traduções pareadas. | Nenhum projeto publicado sem par PT/EN; nenhuma contagem obsoleta. |
