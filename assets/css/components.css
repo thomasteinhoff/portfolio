@@ -436,8 +436,13 @@
   font-size: 0.5rem;
 }
 
-.index-list li > span:nth-child(2) {
+.index-list li > :nth-child(2) {
   flex: none;
+}
+
+.index-list li > a:hover,
+.index-list li > a:focus-visible {
+  color: var(--signal-light);
 }
 
 .index-list .leader {
