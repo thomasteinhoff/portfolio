@@ -4,13 +4,13 @@ Protótipo visual de portfólio pessoal para design gráfico, ilustração, inte
 
 A página inicial funciona como uma **prancha editorial modular**: uma grade assimétrica de cards com proporções variadas, tipografia expressiva, placas vetoriais provisórias e micro-informações técnicas. O projeto é intencionalmente estático, sem frameworks, bibliotecas de componentes, bundlers ou backend.
 
-> **Estado do conteúdo:** o estudo do Tally é real e baseado no histórico do projeto. Nome, e-mail, links institucionais, demais projetos e mídias visuais continuam provisórios. Nenhum cliente, resultado ou experiência profissional foi inventado. Os pontos que precisam de substituição estão indicados no site e neste README.
+> **Estado do conteúdo:** os estudos do Tally, Motoclube e Rotten Carmilla são reais; os dois estudos de branding estão em prévia editorial, com placeholders e `noindex, nofollow`. Nome, e-mail, links institucionais, demais projetos e mídias visuais continuam provisórios. Nenhum cliente, resultado ou experiência profissional foi inventado. Os pontos que precisam de substituição estão indicados no site e neste README.
 
 ## Planejamento
 
-A **Fase 0 — consolidação do planejamento** está concluída. A **Fase 1 — fundação bilíngue do shell** foi implementada para as páginas institucionais, com uma pendência editorial: o currículo PT/EN continua em rascunho até a fonte `.tex` ser localizada e conferida. A **Fase 2 — estrutura de projetos** foi implementada: o Tally migrou para `pages/projects/tally/`, tem par PT/EN, e os componentes aceitam imagens nos slots existentes. A **Fase 7** teve início com o estudo de caso real do Tally, publicado com mídias provisórias até as capturas sanitizadas serem produzidas. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
+A **Fase 0 — consolidação do planejamento** está concluída. A **Fase 1 — fundação bilíngue do shell** foi implementada para as páginas institucionais, com uma pendência editorial: o currículo PT/EN continua em rascunho até a fonte `.tex` ser localizada e conferida. A **Fase 2 — estrutura de projetos** foi implementada: o Tally migrou para `pages/projects/tally/`, tem par PT/EN, e os componentes aceitam imagens nos slots existentes. A **Fase 5 — piloto de Branding** produziu os estudos do Motoclube e da Rotten Carmilla em PT/EN; a **Fase 6** os integrou à home, ao arquivo e à navegação entre estudos; o detalhamento por etapa está em [`BRANDING_PROGRESS.md`](BRANDING_PROGRESS.md). A **Fase 7** teve início com o estudo de caso real do Tally, publicado com mídias provisórias até as capturas sanitizadas serem produzidas. As decisões de arquitetura, internacionalização, conteúdo, ambientes de trabalho e execução estão registradas em [`ROADMAP.md`](ROADMAP.md).
 
-Este README descreve o estado real do protótipo v0.1. A estrutura-alvo, as fases e o fluxo detalhado de trabalho não são duplicados aqui.
+Este README descreve o estado real do protótipo v0.1. A estrutura-alvo, as fases e o fluxo detalhado de trabalho não são duplicados aqui. As diretrizes permanentes de trabalho estão em [`AGENTS.md`](AGENTS.md).
 
 ## Tecnologias
 
@@ -24,7 +24,7 @@ Não há dependências externas obrigatórias, ferramentas de build, requisiçõ
 
 ## Estrutura
 
-Estrutura atual do protótipo. Todas as páginas publicadas têm par PT/EN, incluindo o Tally e o arquivo de projetos. Os templates internos pertencem à F4 e estão descritos no [`ROADMAP.md`](ROADMAP.md).
+Estrutura atual do protótipo. Todas as páginas publicadas têm par PT/EN, incluindo os três estudos de caso e o arquivo de projetos. Os templates internos pertencem à F4 e estão descritos no [`ROADMAP.md`](ROADMAP.md).
 
 ```text
 portfolio/
@@ -47,12 +47,24 @@ portfolio/
 │       │   ├── illustration.en.html
 │       │   ├── software.html
 │       │   └── software.en.html
-│       └── tally/
-│           ├── index.html             # estudo de caso PT
-│           ├── index.en.html          # estudo de caso EN
-│           ├── project.css            # ajustes escopados de galeria e captura
-│           ├── ASSETS.md              # inventário de mídias e placeholders
-│           └── images/                # símbolo oficial, versão para fundo claro e capturas provisórias
+│       ├── tally/
+│       │   ├── index.html             # estudo de caso PT
+│       │   ├── index.en.html          # estudo de caso EN
+│       │   ├── project.css            # ajustes escopados de galeria e captura
+│       │   ├── ASSETS.md              # inventário de mídias e placeholders
+│       │   └── images/                # símbolo oficial, versão para fundo claro e capturas provisórias
+│       ├── motoclube/
+│       │   ├── index.html             # prévia PT
+│       │   ├── index.en.html          # prévia EN
+│       │   ├── project.css            # proporções das placas
+│       │   ├── ASSETS.md              # inventário de mídias
+│       │   └── images/                # vazia até as mídias finais
+│       └── rotten-carmilla/
+│           ├── index.html             # prévia PT
+│           ├── index.en.html          # prévia EN
+│           ├── project.css            # proporções das placas
+│           ├── ASSETS.md              # inventário de mídias e textos alternativos
+│           └── images/                # vazia até as mídias finais
 ├── assets/
 │   ├── css/
 │   │   ├── fonts.css        # fontes WOFF2 embutidas em base64 (funciona via file://)
@@ -68,19 +80,22 @@ portfolio/
 │   │   └── OFL-JetBrainsMono.txt
 │   ├── icons/
 │   │   └── favicon.svg
-│   └── images/              # imagens compartilhadas pelo site
+│   └── images/
+│       └── placeholders/    # placas neutras usadas pelas prévias
 ├── .gitignore
+├── AGENTS.md                # diretrizes permanentes de trabalho
+├── BRANDING_PROGRESS.md     # registro das etapas de Branding
 ├── ROADMAP.md               # planejamento, fases e fluxo de trabalho
 └── README.md
 ```
 
-Imagens compartilhadas pelo site ficam em `assets/images/`; imagens específicas de um estudo de caso ficam em `pages/projects/<slug>/images/` e são referenciadas com caminhos relativos.
+Imagens compartilhadas pelo site ficam em `assets/images/`, com os placeholders das prévias em `assets/images/placeholders/`. Imagens específicas de um estudo de caso ficam em `pages/projects/<slug>/images/` e são referenciadas com caminhos relativos.
 
 ## Idiomas
 
 Português é o idioma principal e permanece nos caminhos atuais. O inglês usa o sufixo `.en.html` no mesmo diretório, por exemplo `index.en.html` e `pages/about.en.html`.
 
-A troca de idioma é feita por links HTML comuns, sem JavaScript, e aponta para a página equivalente. O idioma atual é marcado com `aria-current="true"`. O Tally e o arquivo de projetos têm par PT/EN completo; o currículo EN continua rascunho até a conferência com o `.tex`.
+A troca de idioma é feita por links HTML comuns, sem JavaScript, e aponta para a página equivalente. O idioma atual é marcado com `aria-current="true"`. Tally, Motoclube, Rotten Carmilla e o arquivo de projetos têm par PT/EN; o currículo EN continua rascunho até a conferência com o `.tex`.
 
 Todas as páginas públicas usam `translate="no"` no elemento `<html>` e `<meta name="google" content="notranslate">` no `<head>` para impedir a tradução automática do navegador. Os textos já existem nos dois idiomas; essa proteção apenas evita que a interface seja reescrita por ferramentas externas.
 
@@ -138,11 +153,20 @@ O estudo do Tally usa [`pages/projects/tally/ASSETS.md`](pages/projects/tally/AS
 
 O estudo não inclui pesquisa com usuários, métricas, resultados financeiros ou clientes.
 
+## Estudos de caso de Branding
+
+`pages/projects/motoclube/` e `pages/projects/rotten-carmilla/` formam prévias editoriais PT/EN, com placeholders e `noindex, nofollow`. Ambas usam `project.css` escopado para preservar proporções e `ASSETS.md` como inventário de mídias, nomes de arquivo e textos alternativos.
+
+- **Motoclube:** identidade visual para um grupo informal de motociclistas; nome de trabalho, 2026. Nome oficial, Instagram, cores e tipografia ainda precisam ser confirmados, e o PDF de identidade não está disponível.
+- **Rotten Carmilla:** identidade visual contratada para a banda em 2025. As letras do lettering são os traços que formam uma mosca; o trabalho inclui a capa do single “Evicted in Blood and Smoke”. As imagens usadas na capa vieram do Pinterest sem licença registrada e não devem ser tratadas como assets finais.
+
+Nenhuma imagem final foi adicionada às pastas `images/` dos dois estudos. Registros de processo, story, adesivo e detalhes da capa da Rotten Carmilla seguem pendentes ou a verificar.
+
 ## Arquivo de projetos
 
 `pages/projects/index.html` e `pages/projects/index.en.html` formam o catálogo completo, agrupado em Branding, Ilustração e Software. A home mantém a seleção curada e linka para o arquivo.
 
-Projetos reais sem página individual aparecem como cards não linkáveis, com status “Em preparação” / “In preparation”. Nenhum link aponta para página inexistente; quando houver conteúdo suficiente, a entrada passa a ser um link sem mudar a estrutura do arquivo.
+Os três estudos de caso aparecem como cards linkados. Os demais projetos reais sem página individual seguem como cards não linkáveis, com status “Em preparação” / “In preparation”. Nenhum link aponta para página inexistente; quando houver conteúdo suficiente, a entrada passa a ser um link sem mudar a estrutura do arquivo.
 
 ## Modelos editoriais
 
@@ -193,14 +217,14 @@ Substitua os placeholders em todas as páginas:
 3. **Anos:** busque por `20—` nos cards, currículo e ficha técnica.
 4. **Links externos:** a página de contato aponta para o GitHub informado no briefing e marca os demais canais como “em preparação”.
 5. **Textos provisórios:** revise as notas com `Provisório`, `Provisional`, `Em preparação`, `In preparation` e `a confirmar` / `to be confirmed`.
-6. **Imagens:** as composições do site continuam em SVG/CSS. As cinco capturas do Tally já estão em `pages/projects/tally/images/`, em versão provisória, e devem ser refeitas com dados fictícios. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/` ou em `pages/projects/<slug>/images/`.
+6. **Imagens:** as composições do site continuam em SVG/CSS. As cinco capturas do Tally já estão em `pages/projects/tally/images/`, em versão provisória, e devem ser refeitas com dados fictícios. As prévias de Branding usam placeholders compartilhados e seguem sem imagens finais em `pages/projects/<slug>/images/`. Fotos e mockups reais devem ser otimizados antes de entrar em `assets/images/` ou em `pages/projects/<slug>/images/`.
 7. **Currículo:** conferir o conteúdo contra o arquivo `.tex` existente antes de publicar. Não inventar experiências, datas ou formação.
 
 ## Adicionar um novo projeto
 
 O fluxo completo está descrito na seção 8 do [`ROADMAP.md`](ROADMAP.md): modelos internos em `pages/projects/_templates/`, página em português, página irmã em `.en.html`, arquivo canônico e atualização da home/currículo.
 
-A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. A F4 criou os seis modelos editoriais internos, sem páginas públicas de demonstração e sem CSS novo. A F7 publicou o estudo de caso do Tally nos dois idiomas, com capturas provisórias e inventário em `ASSETS.md`; a conclusão da fase depende das capturas sanitizadas. O mosaico da home segue manual, em `index.html`/`components.css`.
+A F2 concluiu a migração do Tally para `pages/projects/tally/` e o par PT/EN. A F3 criou o arquivo em `pages/projects/index.html` e `index.en.html`, com entradas reais mesmo sem página individual. A F4 criou os seis modelos editoriais internos, sem páginas públicas de demonstração e sem CSS novo. A F5 criou os estudos de Branding em PT/EN; a F6 os vinculou à home, ao arquivo e à navegação entre estudos. A F7 publicou o estudo de caso do Tally nos dois idiomas, com capturas provisórias e inventário em `ASSETS.md`; a conclusão da fase depende das capturas sanitizadas. O mosaico da home segue manual, em `index.html`/`components.css`.
 
 ## Desenvolvimento em dois computadores
 
@@ -236,17 +260,18 @@ O projeto é compatível com hospedagem estática e não exige build. Quando o c
 3. Como os caminhos são relativos e o site parte da raiz, não é necessário configurar `base` ou variáveis.
 4. Não há GitHub Actions configurada; a publicação pode ser feita diretamente pela interface do GitHub.
 
-O push é feito manualmente ao final de cada fase concluída. A ativação do GitHub Pages continua manual e deve ocorrer depois das etapas de conteúdo e QA.
+Commits e pushes são feitos manualmente; não há publicação automática. A ativação do GitHub Pages continua manual e deve ocorrer depois das etapas de conteúdo e QA.
 
 ## Limitações desta versão
 
 - Conteúdo, imagem de retrato, e-mail e links são provisórios.
 - Não há formulário de contato funcional, CMS, banco de dados ou integração externa.
-- A versão em inglês cobre páginas institucionais, Tally, arquivo de projetos e os seis modelos internos.
-- Apenas o Tally possui página interna, agora um estudo de caso real com capturas provisórias; no arquivo, os demais projetos são entradas reais sem página individual, identificadas como “em preparação”.
+- A versão em inglês cobre páginas institucionais, Tally, Motoclube, Rotten Carmilla, arquivo de projetos e os seis modelos internos.
+- Há três estudos de caso com páginas internas: Tally, Motoclube e Rotten Carmilla. No arquivo, os demais projetos são entradas reais sem página individual, identificadas como “em preparação”.
 - As capturas do Tally ainda não foram produzidas em versão sanitizada; as atuais mostram o aplicativo real e serão substituídas. Os dois GIFs de interação continuam como placeholders.
+- As prévias de Branding não têm imagens finais, usam placeholders e estão fora de resultados de busca (`noindex, nofollow`). As imagens da capa da Rotten Carmilla vieram do Pinterest sem licença registrada; registros de processo, story, adesivo e detalhes da capa seguem pendentes ou a verificar.
 - Os modelos da F4 são internos e estão fora da navegação e do índice: não há páginas públicas de demonstração para Branding, Ilustração ou Software.
 - Os modelos usam placeholders e SVGs neutros. Nenhum conteúdo de projeto foi inventado, e nenhum CSS específico por categoria foi criado na F4.
 - O mosaico de projetos usa posições explícitas de grade. Novos cards exigem ajuste manual da composição em desktop e tablet.
 - O PDF do currículo ainda não existe; o botão está visualmente desativado. O par PT/EN atual é um rascunho e deve ser conciliado com o `.tex` existente.
-- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 foram concluídas. A Fase 7 está em andamento: estudo do Tally publicado com mídias provisórias e capturas sanitizadas pendentes.
+- A Fase 1 foi concluída com pendência editorial no currículo; as Fases 2, 3 e 4 foram concluídas. As Fases 5 e 6 produziram e integraram os estudos de Branding. A Fase 7 está em andamento: estudo do Tally publicado com mídias provisórias e capturas sanitizadas pendentes.
