@@ -2,6 +2,19 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
+## Atualização — Etapa 6 (integração geral) concluída
+
+Registrada em 28 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos 1 a 4.
+
+- Decisões aprovadas antes da implementação: na home, os estudos entram como links no card Índice e são citados na nota — sem cards novos e sem mudança de composição; no arquivo, os cards passam a usar os nomes reais dos projetos.
+- Marco 1 — `cf125c4` (`feat(archive): link Motoclube and Rotten Carmilla case studies`): os dois cards de Branding em `pages/projects/index.html` e `index.en.html` viraram links com `aria-label`, títulos “Rotten Carmilla” e “Motoclube” e status “Estudo de caso (prévia)” / “Case study (preview)”. Sem texto de “sem página individual” nesses cards.
+- Marco 2 — `656b9c6` (`feat(case-nav): link Motoclube and Rotten Carmilla studies`): os quatro `case-nav__item--muted` foram substituídos por links reais nos dois idiomas — Motoclube → Rotten Carmilla e Rotten Carmilla → Motoclube. Tally permanece com “Conteúdo a definir” / “Content to be defined”.
+- Marco 3 — `ab20eee` (`feat(home): link published studies from index and note`): o card Índice da home PT/EN passou a ter 7 entradas, com as três prévias publicadas linkadas (Tally 2026, Motoclube 2026, Rotten Carmilla 2025); a nota cita as três prévias e o texto antigo “apenas o Tally” foi removido. Uma única regra em `assets/css/components.css` garante que a âncora mantenha `flex: none` e tenha feedback de hover/foco; `responsive.css` não foi alterado.
+- Marco 4 — validação sem nova alteração de código: paridade PT/EN dos links e cards, ativação dos quatro links de navegação, 8 páginas e 29 URLs locais únicas com HTTP 200, e auditoria headless em 20 combinações página/largura (home e arquivo em 390/721/1440 px; estudos em 390/1440 px) sem overflow fora dos elementos já recortados, sem imagem quebrada e com foco visível em 100% dos elementos alcançáveis. `git diff --check` limpo.
+- Preservado: conteúdo e placeholders dos estudos, `noindex, nofollow`, navegação do Tally, componentes compartilhados além da regra mínima do índice, e nenhuma informação, imagem ou entrega inventada.
+- Estado Git antes do commit de fechamento: `portfolio-integration` com 11 commits locais à frente de `origin/portfolio-integration` (`ea6b493`); `main` e `origin/main` em `d60f3de`. Sem push, merge, rebase, reset, amend, force push, tag ou release.
+- Etapa 6 encerrada localmente. Faltam revisão visual do usuário e autorização de push; Etapa 7 (atualizar `README.md`) não iniciada.
+
 ## Atualização — Etapa 5 (Rotten Carmilla EN) concluída
 
 Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos A a C.
