@@ -2,6 +2,18 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
+## Atualização — Etapa 3 (Motoclube EN) em andamento
+
+Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois do push do checkpoint `99bd274`.
+
+- Etapa 3 iniciada com autorização do usuário. Marco A commitado em `db97ddc` (`feat(motoclube): add English case study`): `pages/projects/motoclube/index.en.html`, espelhando a versão PT.
+- Reaproveitamento: mesmos IDs de seção, 13 figuras e legendas, placeholders compartilhados, `project.css` escopado, componentes `case`/`plate`/`specs`, navegação e rodapé; nenhuma imagem duplicada.
+- Conteúdo: textos em inglês derivados da página PT e textos alternativos conferidos com a coluna EN de `ASSETS.md`. O status de prévia foi preservado: `noindex, nofollow`, aviso editorial, dados oficiais pendentes e próximo estudo silenciado. Nenhum nome, data, aplicação, cor, fonte ou resultado foi inventado.
+- Alternância de idioma: a página EN já tem `canonical` próprio, `hreflang` PT/EN/x-default e links para a PT no header e no menu. O marco B ativa o seletor EN e os `hreflang` na página PT; este é o escopo do commit atual.
+- Validações já executadas: checker PT/EN (13 imagens, alts EN conferidos, sequências de tags de `main` e `footer` idênticas, 9 IDs iguais, 13 legendas e alvos locais existentes), paridade de layout em 1440/1024/721/720/390 px sem overflow e 13/13 imagens carregadas nos dois idiomas, auditoria de teclado/menu em 390 e 721 px e revisão de capturas visuais.
+- Pendências para encerrar a Etapa 3: revalidar o par completo depois do marco B, conferir a alternância PT↔EN e os links locais/HTTP, executar `git diff --check` e obter autorização antes de qualquer push.
+- Fora de escopo: home, arquivo de projetos, Rotten Carmilla, CSS/JS compartilhados e integração geral, que pertence à Etapa 6.
+
 ## 0. Atualização — Etapa 2 (Motoclube PT) concluída
 
 Registrada em 27 de novembro de 2026, depois do checkpoint original. As seções 1 a 7 abaixo descrevem o estado anterior e são mantidas como registro histórico.
