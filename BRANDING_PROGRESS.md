@@ -2,6 +2,17 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
+## Atualização — Etapa 7 (README) concluída
+
+Registrada em 28 de novembro de 2026 na branch `portfolio-integration`, depois da revisão visual da Etapa 6.
+
+- A revisão visual da integração foi aprovada pelo usuário; nenhuma decisão de design foi reaberta.
+- A Etapa 7 atualizou `README.md` para refletir os três estudos, a paridade PT/EN, a organização de assets, as Fases 5 e 6 e as limitações conhecidas. Nenhum código ou outro documento foi alterado.
+- Commit `47f4a1e` (`docs(readme): reflect integrated case studies`), exclusivo em `README.md`.
+- Validação: checker de links/caminhos do README sem `MISS`, `git diff --check` limpo e QA final aprovado na Etapa 8 sem bloqueantes.
+- Estado Git antes deste ajuste documental: `portfolio-integration` com 13 commits locais à frente de `origin/portfolio-integration`; `main` e `origin/main` em `d60f3de`; sem push, merge, rebase, reset, amend, force push, tag ou release.
+- Etapa 7 encerrada localmente. Push da integração permanece pendente.
+
 ## Atualização — Etapa 6 (integração geral) concluída
 
 Registrada em 28 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos 1 a 4.
@@ -13,7 +24,7 @@ Registrada em 28 de novembro de 2026 na branch `portfolio-integration`, depois d
 - Marco 4 — validação sem nova alteração de código: paridade PT/EN dos links e cards, ativação dos quatro links de navegação, 8 páginas e 29 URLs locais únicas com HTTP 200, e auditoria headless em 20 combinações página/largura (home e arquivo em 390/721/1440 px; estudos em 390/1440 px) sem overflow fora dos elementos já recortados, sem imagem quebrada e com foco visível em 100% dos elementos alcançáveis. `git diff --check` limpo.
 - Preservado: conteúdo e placeholders dos estudos, `noindex, nofollow`, navegação do Tally, componentes compartilhados além da regra mínima do índice, e nenhuma informação, imagem ou entrega inventada.
 - Estado Git antes do commit de fechamento: `portfolio-integration` com 11 commits locais à frente de `origin/portfolio-integration` (`ea6b493`); `main` e `origin/main` em `d60f3de`. Sem push, merge, rebase, reset, amend, force push, tag ou release.
-- Etapa 6 encerrada localmente. Faltam revisão visual do usuário e autorização de push; Etapa 7 (atualizar `README.md`) não iniciada.
+- Etapa 6 encerrada localmente naquele momento; revisão visual aprovada depois, conforme atualização da Etapa 7 acima. Etapa 7 concluída; push permanece pendente.
 
 ## Atualização — Etapa 5 (Rotten Carmilla EN) concluída
 

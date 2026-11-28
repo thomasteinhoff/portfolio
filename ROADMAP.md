@@ -1,12 +1,12 @@
 # Portfólio — Roadmap de arquitetura e conteúdo
 
-> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fases 2 e 3 concluídas; Fase 4 concluída; Fase 5 em andamento (estudos Motoclube e Rotten Carmilla em PT/EN concluídos como prévia e integrados à home, ao arquivo e à navegação entre estudos; aguardando revisão/push); Fase 7 em andamento (estudo do Tally publicado com mídias provisórias).
+> **Status:** Fase 0 concluída; Fase 1 concluída com pendência editorial no currículo; Fases 2, 3 e 4 concluídas; Fase 5 concluída localmente (estudos Motoclube e Rotten Carmilla em PT/EN concluídos como prévia, integrados à home, ao arquivo e à navegação entre estudos; revisão visual aprovada; push pendente); Fase 6 concluída localmente (integração geral); Fase 7 em andamento (estudo do Tally publicado com mídias provisórias).
 >
 > **Baseline do protótipo:** `5b39f07 — Initial portfolio prototype — v0.1`
 >
 > **Branch:** `main`
 >
-> **Fases em andamento:** F5 — piloto de Branding; F7 — capturas sanitizadas do Tally pendentes.
+> **Fases em andamento:** F7 — capturas sanitizadas do Tally pendentes; push ainda não realizado.
 >
 > **Escopo deste documento:** decisões de arquitetura, internacionalização, conteúdo, estrutura de arquivos, ambientes de trabalho e entregas futuras. A implementação da F5 em diante não faz parte desta etapa.
 
