@@ -14,3 +14,16 @@
 .case-gallery .plate--sketch .plate__canvas {
   aspect-ratio: 1000 / 1250;
 }
+
+/* Abaixo de 720 px o CSS compartilhado achata as placas horizontais para 4:3.
+   As pranchas de processo (1520 × 1000) e os detalhes (1455 × 1000) seriam
+   recortados; o lettering mantém a proporção definida acima. */
+@media (max-width: 720px) {
+  .case-gallery .plate--wide:not(.plate--logo) .plate__canvas {
+    aspect-ratio: 1520 / 1000;
+  }
+
+  .case-gallery .plate--half .plate__canvas {
+    aspect-ratio: 1455 / 1000;
+  }
+}
