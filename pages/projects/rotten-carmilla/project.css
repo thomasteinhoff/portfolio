@@ -1,0 +1,16 @@
+/* Rotten Carmilla case study — scoped image ratios.
+   The shared cover is 1400 × 620 and the small-screen plates are 4:3.
+   The approved artwork is square, 1600 × 900 or 1000 × 1250, so those
+   frames are restored here without touching the shared stylesheets. */
+
+.case .case__cover-canvas {
+  aspect-ratio: 1 / 1;
+}
+
+.case-gallery .plate--logo .plate__canvas {
+  aspect-ratio: 1600 / 900;
+}
+
+.case-gallery .plate--sketch .plate__canvas {
+  aspect-ratio: 1000 / 1250;
+}
