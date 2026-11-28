@@ -2,6 +2,18 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
+## Atualização — Etapa 4 (Rotten Carmilla PT) em andamento
+
+Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos 1 a 4.
+
+- Marco 1 — `a7a41b7` (`feat(rotten-carmilla): add Portuguese case study structure`): página PT completa em `pages/projects/rotten-carmilla/index.html`, com ordem aprovada Contexto → Lettering e referências → Processo de construção → Capa do single → Ficha técnica. Metadados de prévia (`noindex, nofollow`, canonical PT, sem `hreflang`, seletor EN desativado), 12 figuras com alts conferidos com `ASSETS.md` e next study silenciado.
+- Marco 2 — `41e2bcb` (`feat(rotten-carmilla): scope CSS to preserve artwork ratios`): `project.css` escopado, carregado por último, com capa 1:1, lettering 1600 × 900 e rascunhos 1000 × 1250.
+- Marco 3 — `6ea2d3f` (`fix(rotten-carmilla): restore landscape plate ratios on small screens`): revisão em 1440/1100/768/720/390 px identificou o achatamento 4:3 das pranchas horizontais abaixo de 720 px; proporções 1520 × 1000 e 1455 × 1000 restauradas apenas nessa largura.
+- Marco 4 — validado sem alteração de código: checker de acessibilidade (tags balanceadas, 7 IDs únicos, 12 imagens com `alt`/dimensões, 12 `figcaption`, landmarks, 5 `nav` rotulados, skip-link primeiro, sem `tabindex` positivo, h1 único), checker da Etapa 1, 16 URLs locais com HTTP 200 e auditoria de foco em 390/721/1440 px (skip-link primeiro, foco visível nos elementos alcançáveis, menu native `<details>` abre/fecha e os 6 links do painel são focáveis quando aberto). `git diff --check` sem erros.
+- Decisões de conteúdo preservadas: as letras **são** os traços da mosca; título do single “Evicted in Blood and Smoke”; preto, branco e detalhes em vermelho como característica observada; posts de Instagram apenas na ficha técnica; sem manual, paleta oficial ou resultados documentados.
+- Pendências: registros de processo, story, adesivo, detalhes de embalagem/tijolo/textura/tipografia da capa e direitos de uso das imagens do Pinterest. Nenhuma imagem final foi adicionada.
+- Fora de escopo nesta etapa: versão EN, home, arquivo de projetos, Motoclube, Tally, CSS/JS compartilhados e push.
+
 ## Atualização — Etapa 3 (Motoclube EN) em andamento
 
 Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois do push do checkpoint `99bd274`.
