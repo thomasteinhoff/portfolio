@@ -611,7 +611,7 @@ As etiquetas não substituem as dependências entre fases. Elas apenas indicam o
 | **F2** | Concluída | `[REMOTO]` + `[CASA]` condicional | Estrutura e código remotos concluídos; capturas ou assets visuais do Tally seguem pendentes em casa. |
 | **F3** | Concluída | `[REMOTO]` | Arquivo, navegação e links concluídos no repositório. |
 | **F4** | Concluída | `[REMOTO]` | Seis modelos PT/EN internos concluídos; sem CSS novo e sem páginas públicas. |
-| **F5** | Em andamento | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. Etapa 1 concluída; Etapa 2 (Motoclube PT) concluída; Etapa 3 (Motoclube EN) implementada como prévia, com validação técnica concluída; Etapa 4 (Rotten Carmilla PT) implementada como prévia, com marcos 1–5 validados; Etapa 5 (EN), integração geral e push pendentes. |
+| **F5** | Em andamento | `[CASA]` + `[REMOTO]` | Seleção e produção visual em casa; implementação da página no repo. Etapa 1 concluída; Etapa 2 (Motoclube PT) concluída; Etapa 3 (Motoclube EN) implementada como prévia, com validação técnica concluída; Etapa 4 (Rotten Carmilla PT) implementada como prévia, com marcos 1–5 validados; Etapa 5 (Rotten Carmilla EN) implementada com paridade PT/EN e validação técnica concluída; integração geral e push pendentes. |
 | **F6** | Não iniciada | `[CASA]` + `[REMOTO]` | Ilustração depende de materiais originais; HTML/CSS no repo. |
 | **F7** | Em andamento | `[REMOTO]` + `[CASA]` | Estudo do Tally em PT/EN publicado; capturas sanitizadas e revisão final pendentes. |
 | **F8** | Não iniciada | `[QUALQUER]` + `[REMOTO]` + `[CASA]` | Curadoria e textos em qualquer lugar; implementação remota; imagens finais em casa. |

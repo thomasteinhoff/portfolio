@@ -2,6 +2,18 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
+## Atualização — Etapa 5 (Rotten Carmilla EN) concluída
+
+Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos A a C.
+
+- Marco A — `a21a281` (`feat(rotten-carmilla): add English case study`): criado `pages/projects/rotten-carmilla/index.en.html` com 466 linhas. Mesma sequência de tags do body, mesmos 7 IDs, mesmas 12 figuras com os mesmos `src`/dimensões, alts EN conferidos com `ASSETS.md`, 4 etapas de processo e 10 linhas de ficha. Metadata EN: `lang="en"`, `noindex, nofollow`, canonical EN, `hreflang` pt-BR/en/x-default e dois links para a PT no header e no menu.
+- Marco B — `2ad9ed4` (`feat(rotten-carmilla): link PT and EN case studies`): ativado o seletor EN na versão PT (dois links reais com `hreflang="en"` e `aria-label`) e adicionados os `hreflang` pt-BR/en/x-default à PT, espelhando o padrão Motoclube.
+- Marco C — validação sem alteração de código: checker de paridade PT/EN (326 tags idênticas no body, IDs, imagens, alts, legendas, conceito central e ausência de texto PT na EN), 23 URLs locais com HTTP 200 nas duas páginas, paridade de geometria em 390/721/1440 px (capa 1:1, lettering 16:9, rascunhos 4:5 e placas horizontais preservadas, sem overflow ou imagem quebrada) e auditoria de foco/menu nas duas versões (skip-link primeiro, foco visível, menu abre/fecha e 7 links focáveis quando aberto). `git diff --check` limpo.
+- Conteúdo preservado: as letras **são** os traços da mosca; título “Evicted in Blood and Smoke”; Pinterest sem licença registrada; story, adesivo, registros de processo e detalhes da capa como pendências; próximo estudo Motoclube silenciado. Nenhuma imagem, aplicação ou informação nova foi inventada.
+- Fora de escopo: Etapa 6, home, arquivo de projetos, Motoclube, Tally e componentes compartilhados — nenhum desses arquivos foi alterado.
+- Estado Git antes do commit de fechamento: `portfolio-integration` sete commits à frente de `origin/portfolio-integration` (`ea6b493`); `main` e `origin/main` em `d60f3de`; working tree limpa além deste relatório e do `ROADMAP.md`. Sem push.
+- Etapa 5 encerrada localmente. Revisão do usuário e autorização de push permanecem pendentes; Etapa 6 não iniciada.
+
 ## Atualização — Etapa 4 (Rotten Carmilla PT) concluída
 
 Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos 1 a 4.
