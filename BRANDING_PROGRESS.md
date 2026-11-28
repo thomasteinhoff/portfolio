@@ -2,7 +2,7 @@
 
 > Checkpoint de 27 de novembro de 2026. Este documento registra o estado real do trabalho de Branding na branch `portfolio-branding`. Ele complementa o `ROADMAP.md` e serve para retomada em outra sessão.
 
-## Atualização — Etapa 4 (Rotten Carmilla PT) em andamento
+## Atualização — Etapa 4 (Rotten Carmilla PT) concluída
 
 Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois dos marcos 1 a 4.
 
@@ -13,6 +13,10 @@ Registrada em 27 de novembro de 2026 na branch `portfolio-integration`, depois d
 - Decisões de conteúdo preservadas: as letras **são** os traços da mosca; título do single “Evicted in Blood and Smoke”; preto, branco e detalhes em vermelho como característica observada; posts de Instagram apenas na ficha técnica; sem manual, paleta oficial ou resultados documentados.
 - Pendências: registros de processo, story, adesivo, detalhes de embalagem/tijolo/textura/tipografia da capa e direitos de uso das imagens do Pinterest. Nenhuma imagem final foi adicionada.
 - Fora de escopo nesta etapa: versão EN, home, arquivo de projetos, Motoclube, Tally, CSS/JS compartilhados e push.
+- Marco 5 — fechamento: `ROADMAP.md` (F5) e `pages/projects/rotten-carmilla/ASSETS.md` atualizados para refletir o título confirmado do single, a origem Pinterest sem licença registrada e a numeração das seções da página. Nenhuma alteração de código após o marco 4.
+- Revalidação final: checkers dos marcos 1, 2 e 4, geometria em 1440/1100/768/720/390 px, 16 URLs locais com HTTP 200, auditoria de foco/menu e `git diff --check` — todos sem falhas.
+- Estado Git antes do commit de fechamento: `portfolio-integration` quatro commits à frente de `origin/portfolio-integration` (`ea6b493`); `main` e `origin/main` em `d60f3de`; pendentes `ROADMAP.md`, `ASSETS.md` e este relatório. Sem push.
+- Etapa 4 encerrada localmente. Revisão do usuário e autorização de push permanecem pendentes; Etapas 5 e 6 não iniciadas.
 
 ## Atualização — Etapa 3 (Motoclube EN) em andamento
 

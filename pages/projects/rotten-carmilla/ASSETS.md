@@ -40,19 +40,19 @@ Este documento descreve o inventário previsto para o estudo de caso. Enquanto o
 | Capa | `cover.webp` | WebP | 1200 × 1200 | Imagem de abertura do estudo | Pendente |
 | 02 Lettering | `logo-primary.svg` | SVG | 1600 × 900 | Lettering principal | Pendente |
 | 02 Lettering | `logo-detail-01.webp` | WebP | 1455 × 1000 | Detalhe das letras e da mosca | Pendente |
-| 02 Lettering | `process-sketch-01.webp` | WebP | 1000 × 1250 | Rascunho manual fotografado | A verificar |
-| 02 Lettering | `process-sketch-02.webp` | WebP | 1000 × 1250 | Rascunho manual fotografado | A verificar |
-| 02 Lettering | `process-vector.webp` | WebP | 1520 × 1000 | Vetorização no Illustrator | A verificar |
-| 02 Lettering | `process-treatment.webp` | WebP | 1520 × 1000 | Tratamento no Photoshop | A verificar |
-| 03 Capa do single | `single-cover.webp` | WebP | 1200 × 1200 | Capa final do single | Pendente |
-| 03 Capa do single | `single-cover-detail-01.webp` | WebP | 1455 × 1000 | Detalhe da embalagem e do tijolo | Pendente |
-| 03 Capa do single | `single-cover-detail-02.webp` | WebP | 1455 × 1000 | Detalhe da textura e da tipografia | Pendente |
-| 03 Capa do single | `prototype-01.webp` | WebP | 1000 × 1000 | Protótipo no Photoshop | A verificar |
-| 03 Capa do single | `prototype-02.webp` | WebP | 1000 × 1000 | Protótipo no Photoshop | A verificar |
-| 04 Comunicação | `instagram-post-01.webp` | WebP | 1080 × 1350 | Post de divulgação | A verificar |
-| 04 Comunicação | `instagram-post-02.webp` | WebP | 1080 × 1350 | Post de divulgação | A verificar |
-| 04 Comunicação | `instagram-story-01.webp` | WebP | 1080 × 1920 | Story de divulgação | A verificar |
-| 04 Comunicação | `sticker-01.webp` | WebP | 1000 × 1000 | Adesivo circular | Pendente |
+| 03 Processo | `process-sketch-01.webp` | WebP | 1000 × 1250 | Rascunho manual fotografado | A verificar |
+| 03 Processo | `process-sketch-02.webp` | WebP | 1000 × 1250 | Rascunho manual fotografado | A verificar |
+| 03 Processo | `process-vector.webp` | WebP | 1520 × 1000 | Vetorização no Illustrator | A verificar |
+| 03 Processo | `process-treatment.webp` | WebP | 1520 × 1000 | Tratamento no Photoshop | A verificar |
+| 04 Capa do single | `single-cover.webp` | WebP | 1200 × 1200 | Capa final do single | Pendente |
+| 04 Capa do single | `single-cover-detail-01.webp` | WebP | 1455 × 1000 | Detalhe da embalagem e do tijolo | Pendente |
+| 04 Capa do single | `single-cover-detail-02.webp` | WebP | 1455 × 1000 | Detalhe da textura e da tipografia | Pendente |
+| 04 Capa do single | `prototype-01.webp` | WebP | 1000 × 1000 | Protótipo no Photoshop | A verificar |
+| 04 Capa do single | `prototype-02.webp` | WebP | 1000 × 1000 | Protótipo no Photoshop | A verificar |
+| Sem figura na página | `instagram-post-01.webp` | WebP | 1080 × 1350 | Post de divulgação | A verificar |
+| Sem figura na página | `instagram-post-02.webp` | WebP | 1080 × 1350 | Post de divulgação | A verificar |
+| Sem figura na página | `instagram-story-01.webp` | WebP | 1080 × 1920 | Story de divulgação | A verificar |
+| Sem figura na página | `sticker-01.webp` | WebP | 1000 × 1000 | Adesivo circular | Pendente |
 
 ## Textos alternativos provisórios
 
@@ -89,9 +89,9 @@ Os textos abaixo descrevem a intenção da figura. Quando a imagem final for adi
 
 ## Observações
 
-- O título do single ainda precisa ser confirmado. Não inventar o nome.
+- O título do single está confirmado: “Evicted in Blood and Smoke”.
 - A letra e a mensagem da música são tratadas como contexto lembrado, não como interpretação definitiva.
-- As imagens de banco usadas na capa não são de autoria do designer; registrar a licença antes de publicar.
+- As imagens usadas na capa foram obtidas no Pinterest e não têm licença registrada. Não usar como assets finais nem afirmar direitos de uso sem definição.
 - O projeto não é um sistema completo de identidade: não há manual, paleta oficial ou tipografia complementar.
 - A maioria dos stories não está mais disponível. As figuras marcadas como “a verificar” podem ser removidas se não houver registro.
 - O sangue foi removido da capa por restrição do Spotify; não reintroduzir esse elemento como se fosse a versão publicada.
@@ -103,7 +103,7 @@ Os textos abaixo descrevem a intenção da figura. Quando a imagem final for adi
 - [ ] Todos os arquivos finais adicionados
 - [ ] Nomes e dimensões conferidos
 - [ ] `alt` PT/EN atualizado
-- [ ] Licenças das imagens de stock registradas
+- [ ] Direitos de uso das imagens do Pinterest definidos
 - [ ] Registros marcados como “a verificar” revisados
 - [ ] Nenhum dado inventado
 - [ ] Aviso de prévia removido
