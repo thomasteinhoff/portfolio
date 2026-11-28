@@ -21,6 +21,16 @@
       });
     });
 
+    menu.addEventListener("focusout", function () {
+      if (!menu.open) return;
+      window.setTimeout(function () {
+        if (menu.open && !menu.contains(doc.activeElement)) {
+          menu.open = false;
+          syncBody();
+        }
+      }, 0);
+    });
+
     doc.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && menu.open) {
         menu.open = false;
